@@ -9,7 +9,8 @@
 ----------------------------------------------------------------------------------------------------*/
 
 body {
-  font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font: 13px/1.5 'museo-sans', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 pre,
@@ -33,10 +34,15 @@ h1 {
 
 h2 {
   font-size: 23px;
+  font-family: "museo-slab",serif;
+  text-shadow:0 -1px 0px rgba(255,255,255,.75);
 }
 
 h3 {
   font-size: 21px;
+  font-family: "museo-slab",serif;
+  margin: 0;
+  text-shadow:0 -1px 0px rgba(255,255,255,.75);
 }
 
 h4 {
@@ -59,11 +65,19 @@ ol {
 }
 
 ul {
-  list-style: disc;
+  list-style: none;
+  padding-left: 0em;
+  text-indent: -1em;
+  margin: 0 0 0 20px;
+}
+
+ul li:before {
+    content: "\2666 \0020";
+    /* content: "+ "; */
 }
 
 li {
-  margin-left: 30px;
+  margin-left: 0px;
 }
 
 p,
@@ -71,7 +85,6 @@ dl,
 hr,
 h1,
 h2,
-h3,
 h4,
 h5,
 h6,
