@@ -10,7 +10,7 @@
 
 body {
   font: 13px/1.5 'museo-sans', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 pre,
