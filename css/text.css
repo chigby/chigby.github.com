@@ -9,8 +9,16 @@
 ----------------------------------------------------------------------------------------------------*/
 
 body {
-  font: 13px/1.5 'museo-sans', 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  font: 13px/1.5 "rooney-sans", 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
+}
+
+p {
+  font: 13px/1.5 "ff-meta-serif-web-pro", 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+blockquote {
+  font: 110% "ff-meta-serif-web-pro";
 }
 
 pre,
@@ -29,18 +37,19 @@ hr {
 ----------------------------------------------------------------------------------------------------*/
 
 h1 {
+  font-family:"rooney-sans", sans-serif;
   font-size: 25px;
 }
 
 h2 {
   font-size: 23px;
-  font-family: "museo-slab",serif;
+  font-family: "rooney-sans",serif;
   text-shadow:0 -1px 0px rgba(255,255,255,.75);
 }
 
 h3 {
   font-size: 21px;
-  font-family: "museo-slab",serif;
+  font-family: "rooney-sans",serif;
   margin: 0;
   text-shadow:0 -1px 0px rgba(255,255,255,.75);
 }
