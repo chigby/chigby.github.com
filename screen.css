@@ -1,0 +1,115 @@
+ul, li { margin: 0; padding: 0; }
+ul { list-style: none; }
+
+body {
+  color: rgba(0, 0, 0, .9);
+  font:1.0em/1.62em 'Source Serif Pro', Georgia;
+}
+
+.container {
+  margin: 0 1em;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 20px;
+}
+
+.container > * {
+  grid-column: col-start / span 12;
+}
+
+.main-footer {
+  border-top: solid 1px #999;
+}
+
+.bullet-separated {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 500px) {
+  .content1, .content3 {
+    grid-column: col-start / span 6;
+  }
+
+  .content2 {
+    grid-column: col-start 7 / span 6;
+  }
+
+  .contact-info ul {
+    display: flex;
+  }
+
+  .contact-info li {
+    margin-right: 2em;
+  }
+
+  .bullet-separated {
+    flex-direction: row;
+  }
+
+  ul.bullet-separated li + li::before {
+    content: "\2022";
+    margin-left: 0.25em;
+  }
+}
+
+@media (min-width: 700px) {
+  .container {
+    margin: 4em auto;
+    max-width: 60em;
+  }
+
+  .header {
+    grid-column: col-start / span 3;
+  }
+
+  .contact-info {
+    grid-column: col-start / span 3;
+    grid-row: 2;
+  }
+
+  .content1 {
+    grid-column: col-start 4 / span 3;
+    grid-row: 1 / 4;
+  }
+
+  .content2 {
+    grid-column: col-start 7 / span 3;
+    grid-row: 1 / 4;
+  }
+
+  .content3 {
+    grid-column: col-start 10 / span 3;
+    grid-row: 1 / 4;
+  }
+
+  .main-footer {
+    grid-column: col-start / span 12;
+  }
+
+  .contact-info ul {
+    flex-direction: column;
+  }
+}
+
+h4 {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5em;
+  margin: 1.5em 0 0;
+}
+
+a {
+  color: rgba(0, 0, 0, 1);
+  text-decoration: underline solid red;
+}
+a:hover {
+  color: red;
+  text-decoration: underline solid red;
+}
+
+p {
+  margin: 0;
+}

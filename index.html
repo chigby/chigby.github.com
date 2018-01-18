@@ -4,75 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cameron Higby-Naquin</title>
+    <link rel="stylesheet" href="screen.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700" rel="stylesheet" type="text/css">
+
     <style>
-    body {
-        color: rgba(0, 0, 0, .9);
-        font:1.0em/1.62em 'Source Serif Pro', Georgia;
-    }
 
-    .container {
-        margin: 4em auto;
-        width: 60em;
-        display: flex;
-    }
-
-    section {
-        width: 14em;
-        margin-right: 1em;
-        background-color: #fff;
-    }
-
-    section:last-child {
-        margin-right: 0;
-    }
-
-    h4 {
-        font-size: 1em;
-        font-style: italic;
-        font-weight: 400;
-        line-height: 1.5em;
-        margin: 1.5em 0 0;
-    }
-
-    a {
-        color: rgba(0, 0, 0, 1);
-        text-decoration: underline solid red;
-    }
-    a:hover {
-        color: red;
-        text-decoration: underline solid red;
-    }
-
-    p {
-        margin: 0;
-    }
-
-    .footer {
-        border-top: solid 1px #999;
-        padding-top: 1em;
-    }
     </style>
   </head>
   <body>
       <div class="container">
-          <section>
-              <h1>Cameron<br> Higby-Naquin</h1>
-              <aside>
-                  Greetings, explorer!  I&#8217;m Cameron, a
-                  programmer, dancer, author, and inveterate tinkerer.
-              </aside>
-              <br>
-              <p>
-                  <a href="mailto:me@chigby.org">me@chigby.org</a>
-              </p>
-              <p>
-                  <a href="chigby.txt">pgp info</a>
-              </p>
+          <section class="header">
+            <h1>Cameron Higby&#8209;Naquin</h1>
+            <aside>
+              Greetings, explorer!  I&#8217;m Cameron, a
+              programmer, dancer, author, and inveterate tinkerer.
+            </aside>
           </section>
-          <section>
+          <section class="contact-info">
+            <ul>
+              <li><a href="mailto:me@chigby.org">me@chigby.org</a></li>
+              <li><a href="chigby.txt">pgp info</a></li>
+            </ul>
+          </section>
+          </section>
+          <section class="content1">
               <h3>Writing</h3>
               <h4>
                   <a href="http://patreon.com/nintharchive">The Ninth Archive</a>
@@ -94,7 +51,7 @@
               <h4><a href="http://pathofleastefficiency.com">Path of Least Efficiency</a></h4>
               <p>Partially-defunct tumblr</p>
           </section>
-          <section>
+          <section class="content2">
               <h3>Games</h3>
               <h4>
                   <a href="http://plastic-idolatry.com/erik/kobolds/">Crusty Kobolds</a>
@@ -118,7 +75,7 @@
                   Minigame on the subject of license agreements and service plans run amok.
               </p>
           </section>
-          <section>
+          <section class="content3">
               <h3>Audio</h3>
               <h4><a href="http://spokenrune.com">The Spoken Rune</a></h4>
               <p>Poetry and prose read aloud</p>
@@ -136,20 +93,22 @@
                   Look up <i>Magic: The Gathering</i> cards on the command line.  Useful for goofing off at work.
               </p>
           </section>
-      </div>
-      <div class="container footer">
-          <section>
-              <p>
-                  <a href="http://github.com/chigby">GitHub</a>
-                  &bull;
-                  <a href="http://twitter.com/nullsurface">Twitter</a>
-                  &bull;
-                  <a href="http://patreon.com/nintharchive">Patreon</a>
-              </p>
-          </section>
-          <section><a href="resume.pdf">Résumé (PDF)</a></section>
-          <section></section>
-          <section></section>
+          <footer class="main-footer">
+            <ul class="bullet-separated">
+              <li>
+                <a href="http://github.com/chigby">GitHub</a>
+              </li>
+              <li>
+                <a href="http://twitter.com/nullsurface">Twitter</a>
+              </li>
+              <li>
+                <a href="http://patreon.com/nintharchive">Patreon</a>
+              </li>
+              <li>
+                <a href="resume.pdf">Résumé (PDF)</a>
+              </li>
+            </ul>
+          </footer>
       </div>
   </body>
 </html>
