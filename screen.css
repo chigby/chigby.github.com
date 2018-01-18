@@ -49,7 +49,7 @@ body {
   }
 
   ul.bullet-separated li + li::before {
-    content: "\2022";
+    content: "\2022 ";
     margin-left: 0.25em;
   }
 }
