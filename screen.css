@@ -19,6 +19,18 @@ body {
 
 .main-footer {
   border-top: solid 1px #999;
+  display: flex;
+  justify-content: space-between;
+}
+
+.webring {
+  margin-top: 1em;
+  grid-column: col-start 10 / span 3;
+}
+
+.webring-icon {
+  height: 32px;
+  width: 32px;
 }
 
 .bullet-separated {
