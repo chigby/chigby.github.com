@@ -1,0 +1,16 @@
+#left {
+    position: absolute;
+    top: 30px;
+}
+
+#middle {
+    position: absolute;
+    top: 30px;
+    left: 500px;
+}
+
+#right {
+  position: absolute;
+  top: 30px;
+  left: 1040px;
+}
