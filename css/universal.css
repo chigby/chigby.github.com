@@ -1,0 +1,39 @@
+*, *:before, *:after { box-sizing: border-box; }
+body { margin: 0; font-family: 'Consolas', monospace; color: #444;}
+
+.no-whitespace { padding: 0; margin: 0;}
+
+.full-height {
+  height: 100vh;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.container {
+  width: 88%;
+  max-width: 600px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.font-serif {
+  font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+}
+
+.text-5xl { font-size: 3rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-xl { font-size: 1.25rem; }
+
+.lh-copy  { line-height: 1.5; }
+.lh-title { line-height: 1.25; }
+
+.green-bg { background-color: #575; }
+.white { color: white; }

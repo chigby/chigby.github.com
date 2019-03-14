@@ -1,0 +1,20 @@
+article {
+  font-size: 1.1rem;
+  min-height: 95vh;
+}
+
+h3 {
+    float: left;
+    font-size: inherit;
+    margin-right: 0.5em;
+    line-height: inherit;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0;
+
+    background-image: url("/img/aldus-leaf.svg");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    padding-right: 27px;
+    background-position: right center;
+}
