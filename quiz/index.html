@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style type="text/css">
+      body {
+       font: normal 112.5%/1.65 sans-serif;
+        margin-top: 0px;
+        padding-top: 0px;
+        width: 35em;
+        margin: 0 auto;
+      }
+      h1 {
+        margin-top: 50px;
+      }
+    </style>
+    <script src="answers.json"></script>
+  </head>
+  <body>
+
+    <div id="quiz">
+      <h1>Quiz of Monster Quizzes</h1>
+
+      <p>There are many terrible online quizzes in this world.  Perhaps
+        you have taken some of them.  But perhaps you wonder if there
+        might be something worse out there, something sinister
+        and <i>monstrous</i> lurking under the stairs that other quizzes
+        blithely ascend &#8212; and if you wonder this, perhaps you also
+        wonder which one you would be!</p>
+
+      <p>Take this quiz to find out which monstrous quiz you are!</p>
+
+      <p>1. Which gemstone do you imagine will be placed at the center of your diadem at your coronation?</p>
+      <p>
+        <label for="a10">
+          <input type="radio" name="q1" id="a10" value="0" />
+          Diamond
+        </label>
+      </p>
+      <p><label for="a11">
+        <input type="radio" name="q1" id="a11" value="1" />
+        Amethyst
+      </label></p>
+      <p><label for="a12">
+        <input type="radio" name="q1" id="a12" value="2" />
+        Opal</label></p>
+      <p><label for="a13">
+        <input type="radio" name="q1" id="a13" value="3" />
+        Ruby</label></p>
+      <p><label for="a14">
+        <input type="radio" name="q1" id="a14" value="4" />
+        Emerald</label></p>
+
+      <p>2. Who shall be the last to remember you?</p>
+      <p><label for="a20">
+        <input type="radio" name="q2" id="a20" value="0" required />
+        A poet</label></p>
+      <p><label for="a21">
+        <input type="radio" name="q2" id="a21" value="1" />
+        A monarch</label></p>
+      <p><label for="a22">
+        <input type="radio" name="q2" id="a22" value="2" />
+        A seer</label></p>
+      <p><label for="a23">
+        <input type="radio" name="q2" id="a23" value="3" />
+        A moneylender</label></p>
+      <p><label for="a24">
+        <input type="radio" name="q2" id="a24" value="4" />
+        A jailer</label></p>
+
+      <p>3. What scent will waft from your sarcophagus at midnight on the anniversary of your death?</p>
+      <p><label for="a30">
+        <input type="radio" name="q3" id="a30" value="0" required />
+        That of storms at sea</label></p>
+      <p><label for="a31">
+        <input type="radio" name="q3" id="a31" value="1" />
+        That of heartwood ash</label></p>
+      <p><label for="a32">
+        <input type="radio" name="q3" id="a32" value="2" />
+        That of disassembled machines</label></p>
+      <p><label for="a33">
+        <input type="radio" name="q3" id="a33" value="3" />
+        That of caves overrun with fungi</label></p>
+      <p><label for="a34">
+        <input type="radio" name="q3" id="a34" value="4" />
+        That of the void</label></p>
+      <p><button id="submit">Submit quiz!</button></p>
+    </div>
+    <div id="answer" style="display:none;">
+      <h1 id="answer_title"></h1>
+      <p id="answer_text"></p>
+      <p><a href="index.html">Take quiz again</a></p>
+    </div>
+
+    <script type="text/javascript">
+     document.getElementById("submit").addEventListener('click', function () {
+         var nodes = document.getElementsByTagName('input');
+         var sum = 0;
+         for (var i = 0; nodes[i]; i++) {
+             if (nodes[i].checked) {
+                 sum = sum + (nodes[i].value | 0);
+             }
+         }
+         var answer = answers[sum % answers.length];
+         document.getElementById("answer_title").innerHTML = "Your result: " + answer['title'] + " Quiz";
+         document.getElementById("answer_text").innerHTML = answer['text'];
+         document.getElementById("answer").setAttribute('style', '');
+         document.getElementById("quiz").setAttribute('style', 'display: none');
+     });
+    </script>
+ </body>
+</html>
