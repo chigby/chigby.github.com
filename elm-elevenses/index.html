@@ -1,9 +1,10 @@
+<!-- metareferences -->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
+        <title>Elm Elevenses: Resources for learning and using the Elm language</title>
         <style type="text/css">
          body{
              margin:1em auto;
@@ -22,8 +23,48 @@
                 <h1>Elm Elevenses &#x2615; &#x1F359; &#x1f370;</h1>
                 <aside>Resources for learning &amp; using the Elm language</aside>
             </header>
-            <section>
+            <nav aria-labelledby="sections-heading">
+                <h2 id="sections-heading">Table of Contents</h2>
+                <ul>
+                    <li>Elm
+                        <ul>
+                            <li><a href="#metareferences">Metareferences</a></li>
+                            <li>
+                                <a href="#example-projects">Example Projects</a>
+                            </li>
+                            <li><a href="#elm-videos">Videos</a>
+                                <ul>
+                                    <li><a href="#videos-begin">Introductory</a></li>
+                                    <li><a href="#videos-intermed">Intermediate</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#elm-articles">Articles</a>
+                                <ul>
+                                    <li><a href="#elm-articles-beginner">Beginner</a></li>
+                                    <li><a href="#elm-articles-intermed">Intermediate</a></li>
+                                    <li><a href="#elm-articles-adv">Advanced-ish</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#fp-js">General Functional Programming in JavaScript</a>
+                    </li>
+                    <li><a href="#misc">Miscellaneous</a></li>
+                </ul>
+            </nav>
+
+            <section id="metareferences">
+                <h2>Metareferences</h2>
+                <ul>
+                    <li><a href="https://github.com/dwyl/learn-elm">Learn Elm</a></li>
+                    <li><a href="https://github.com/isRuslan/awesome-elm">Awesome Elm</a></li>
+                </ul>
+            </section>
+
+            <section id="example-projects" tabindex="-1">
                 <h2>Example Projects</h2>
+                <p>I made these, maybe they will be useful to you?</p>
 
                 <ul>
                     <li>Darken, a Lights Out clone:
@@ -36,35 +77,86 @@
                     </li>
                 </ul>
             </section>
-            <section>
+            <section id="elm-videos">
                 <h2>Videos</h2>
-                <ul>
-                    <li><a href="https://www.youtube.com/watch?v=cgXhMc8M4X4">Jessica Kerr - Adventures in Elm: Question Your Principles</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=3_M2G9U51GA">Richard Feldman - Introduction to Elm (March 22, 2016)</a></li>
-                </ul>
+
+                <section id="videos-begin">
+                    <h3>Introductory</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=cgXhMc8M4X4">Jessica Kerr - Adventures in Elm: Question Your Principles</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=3_M2G9U51GA">Richard Feldman - Introduction to Elm (March 22, 2016)</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=IcgmSRJHu_8">Making Impossible States Impossible</a></li>
+                    </ul>
+                </section>
+
+                <section id="videos-intermed">
+                    <h3>Intermediate</h3>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=28OdemxhfbU">Immutable Relational Data</a>. How to use <code>Dict</code> to solve the problems of duplicate data and multiple sources of truth when dealing with relational data in Elm.</li>
+                        <li><a href="https://www.youtube.com/watch?v=XpDsk374LDE">The Life of a File</a>. How solving two seemingly similar problems using Elm's type and module system can yield vastly different answers due to slightly different constraints.</li>
+                    </ul>
+                </section>
             </section>
-            <section>
+
+
+
+            <section id="elm-articles">
                 <h2>Articles</h2>
 
-                <h3>Beginner-y / Tutorial-y</h3>
-                <ul>
-                    <li><a href="http://guide.elm-lang.org/architecture/">The Elm Architecture</a></li>
-                    <li><a href="http://tech.noredink.com/post/129641182738/building-a-live-validated-signup-form-in-elm">Building a Live-Validated Signup Form in Elm</a></li>
-                </ul>
+                <section id="elm-articles-beginner">
+                    <h3>Beginner-y / Tutorial-y</h3>
+                    <ul>
+                        <li><a href="http://guide.elm-lang.org/architecture/">The Elm Architecture</a></li>
+                        <li><a href="http://tech.noredink.com/post/129641182738/building-a-live-validated-signup-form-in-elm">Building a Live-Validated Signup Form in Elm</a></li>
+                    </ul>
+                </section>
 
-                <h3>More Intermediate</h3>
+                <section id="elm-articles-intermed">
+                    <h3>More Intermediate</h3>
 
+                    <ul>
+                        <li><a href="http://elm-lang.org/blog/how-to-use-elm-at-work">How to Use Elm at Work</a></li>
+                        <li><a href="http://www.adamwaselnuk.com/elm/2016/05/27/understanding-the-elm-type-system.html">Understanding the Elm Type System</a></li>
+                        <li><a href="http://blog.jenkster.com/2016/06/how-elm-slays-a-ui-antipattern.html">How Elm Slays a UI Antipattern</a></li>
+                        <li>Decoders
+                            <ul>
+                                <li><a href="https://thoughtbot.com/blog/5-common-json-decoders">5 Common Json Decoders</a></li>
+                                <li><a href="https://medium.com/@matthew.buscemi/the-five-stages-of-json-decoding-in-elm-e695adb9162a">The Five Stages of JSON Decoding in Elm</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="elm-articles-adv">
+                    <h3>Advanced-ish</h3>
+                    <ul>
+                        <li><a href="https://medium.com/@l.mugnaini/functors-applicatives-and-monads-in-pictures-784c2b5786f7">Functors, Applicatives, And Monads In Pictures (In Elm)</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section id="fp-js">
+                <h2>Functional Programming in JavaScript</h2>
                 <ul>
-                    <li><a href="http://elm-lang.org/blog/how-to-use-elm-at-work">How to Use Elm at Work</a></li>
-                    <li><a href="http://www.adamwaselnuk.com/elm/2016/05/27/understanding-the-elm-type-system.html">Understanding the Elm Type System</a></li>
-                    <li><a href="http://blog.jenkster.com/2016/06/how-elm-slays-a-ui-antipattern.html">How Elm Slays a UI Antipattern</a></li>
+                    <li><a href="http://scott.sauyet.com/Javascript/Talk/FunctionalProgramming/">Functional Programming in Javascript</a></li>
+
+                    <li>
+                        <a href="https://medium.com/@luijar/kliesli-compositions-in-javascript-7e1a7218f0c4">Kleisli Compositions in JavaScript</a>
+                    </li>
                 </ul>
             </section>
-            <section>
-                <h2>Functional Programming in General</h2>
+
+            <section id="fp">
+                <h2>Functional Concepts</h2>
                 <ul>
-                    <li><a href="http://www.slideshare.net/ScottWlaschin/fp-patterns-buildstufflt">Functional Programming Patterns (slides)</a></li>
-                    <li><a href="http://scott.sauyet.com/Javascript/Talk/FunctionalProgramming/">Functional Programming in Javascript</a></li>
+                    <li><a href="http://www.slideshare.net/ScottWlaschin/fp-patterns-buildstufflt">Functional Programming Patterns (slides)</a>. Broad tour of what FP is and why you should care, with examples in F#. These slides were in large part a cause of my interest in typed functional programming in general.</li>
+                    <li><a href="https://www.ahnfelt.net/monads-forget-about-bind/#">Monads (forget about bind)</a>.</li>
+                </ul>
+            </section>
+
+            <section id="misc">
+                <h2>Miscellaneous</h2>
+                <ul>
+                    <li><a href="https://habr.com/en/post/440914/">I lost faith in the industry, burned out, but the cult of the tool saved me.</a>  An opening of the mind.</li>
                 </ul>
             </section>
         </article>
