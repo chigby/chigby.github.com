@@ -19,6 +19,7 @@ body {
   border-top: solid 1px #999;
   display: flex;
   justify-content: space-between;
+  grid-column: 1 / -1;
 }
 
 .webring {
@@ -52,18 +53,15 @@ h4 {
 
 a {
   color: rgba(0, 0, 0, 1);
-  text-decoration: underline solid red;
+  text-decoration: underline;
+  text-decoration-color: red;
+  -webkit-text-decoration-color: red;
 }
+
 a:hover {
   color: red;
-  text-decoration: underline solid red;
 }
 
 p {
   margin: 0;
-}
-
-.main-footer {
-  border-top: solid 1px #999;
-  grid-column: 1 / -1;
 }
