@@ -1,14 +1,22 @@
+*, ::before, ::after { box-sizing: border-box; }
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
 ul, li { margin: 0; padding: 0; }
 ul { list-style: none; }
 
 body {
   color: rgba(0, 0, 0, .9);
   font:1.0em/1.62em 'Source Serif Pro', Georgia, serif;
+  margin: 0;
 }
 
 .container {
-  max-width: 60em;
-  margin: 2% auto;
+  width: min(90%, 60rem);
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   grid-template-rows: auto;
@@ -18,13 +26,10 @@ body {
 .main-footer {
   border-top: solid 1px #999;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   grid-column: 1 / -1;
-}
-
-.webring {
-  margin-top: 1em;
-  grid-column: col-start 10 / span 3;
+  padding-block: 1rem;
 }
 
 .webring-icon {
@@ -33,7 +38,6 @@ body {
 }
 
 .bullet-separated {
-  margin-top: 1em;
   display: flex;
   flex-direction: row;
 }
