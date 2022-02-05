@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('/fonts/librefranklin-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('/fonts/librefranklin-italic-webfont.woff2') format('woff2');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('/fonts/librefranklin-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+}
+
 *, ::before, ::after { box-sizing: border-box; }
 img, svg, video, canvas, audio, iframe, embed, object {
   display: block;
@@ -10,7 +29,7 @@ ul { list-style: none; }
 
 body {
   color: rgba(0, 0, 0, .9);
-  font:1.0em/1.62em 'Source Serif Pro', Georgia, serif;
+  font:1.0em/1.62em 'Libre Franklin', sans-serif;
   margin: 0;
 }
 

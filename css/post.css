@@ -1,6 +1,26 @@
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('/fonts/CrimsonPro-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('/fonts/CrimsonPro-Italic.woff2') format('woff2');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('/fonts/CrimsonPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
 article {
-  font-size: 1.1rem;
   min-height: 95vh;
+  font-size: 1.2rem;
+  line-height: 1.75rem;
 }
 
 h3 {
