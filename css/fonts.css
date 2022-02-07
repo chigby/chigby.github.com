@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('/fonts/CrimsonPro-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('/fonts/CrimsonPro-Italic.woff2') format('woff2');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('/fonts/CrimsonPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('/fonts/librefranklin-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('/fonts/librefranklin-italic-webfont.woff2') format('woff2');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Franklin';
+  src: url('/fonts/librefranklin-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+}
