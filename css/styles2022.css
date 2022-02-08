@@ -1,18 +1,45 @@
 *, *:before, *:after { box-sizing: border-box; }
 
+[data-color-mode=light] {
+  --page-background: #fff;
+  --theme-text-color: #282828;
+  --theme-color: hsl(165,100%,35.3%);
+  --theme-background-color: #00b488;
+  --theme-background-color-light: rgb(230,248,243);
+  --theme-background-color-lighter: rgb(250,254,253);
+  --theme-background-color-lighter-dark: #f7fbfa;
+}
+
+[data-color-mode=dark] {
+  --page-background: #000;
+  --theme-text-color: #c7d7d7;
+  --theme-color: hsl(165,100%,35.3%);
+  --theme-background-color: #003629;
+  --theme-background-color-light: #00241b;
+  --theme-background-color-lighter: rgb(0,4,3);
+  --theme-background-color-lighter-dark: #080c0b;
+}
+
+html {
+  background: var(--page-background);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Libre Franklin', sans-serif;
+  color: var(--theme-text-color);
 }
 
 a {
-  color: #006FF5;
-  /* text-decoration: underline #ea215a; */
-
+  color: var(--theme-color);
   text-decoration: none;
-  border-bottom: #EA215A 0.125rem solid;
   font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--theme-text-color);
 }
 
 .main-nav {
@@ -41,6 +68,7 @@ a {
 
 .webring-link {
   border-style: none;
+  background: none;
 }
 
 .intro {
