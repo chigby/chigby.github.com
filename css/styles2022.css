@@ -73,6 +73,8 @@ a:hover {
 
 .intro {
   margin-top: 2rem;
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
 }
 
 .main-footer {
