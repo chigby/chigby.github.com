@@ -47,6 +47,7 @@ a:hover {
   padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   border-bottom: 1px solid #b0b5b3;
 }
 
@@ -58,8 +59,14 @@ a:hover {
   padding: 0;
 }
 
+@media screen and (min-width: 500px) {
+  .main-nav {
+    flex-direction: row;
+  }
+}
+
 .main-nav li {
-  padding: 0 .5rem;
+  padding-right: .5rem;
 }
 
 .webring-icon {
