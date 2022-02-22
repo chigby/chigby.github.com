@@ -43,6 +43,25 @@ a:hover {
   color: var(--theme-text-color);
 }
 
+pre {
+  margin: 0;
+}
+
+blockquote {
+  background: var(--theme-background-color);
+  background-image: linear-gradient(0deg,rgba(255,255,255,.9) 0,rgba(255,255,255,.9) 100%);
+  /* color: var(--theme-color); */
+  border-left: 10px solid var(--theme-background-color);
+  font-style: italic;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+[data-color-mode=dark] blockquote {
+  background: #091C1C;
+}
+
 .main-nav {
   padding: 0.5rem 1rem;
   display: flex;
@@ -88,6 +107,17 @@ a:hover {
 .features {
   width: min(90%, 50rem);
   margin-inline: auto;
+}
+
+.games {
+  width: min(90%, 50rem);
+  margin-inline: auto;
+}
+
+.content-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .feature-list {
