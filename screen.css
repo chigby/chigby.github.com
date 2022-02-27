@@ -10,7 +10,7 @@ ul { list-style: none; }
 
 body {
   color: rgba(0, 0, 0, .9);
-  font:1.0em/1.62em 'Source Serif Pro', Georgia, serif;
+  font:1.0em/1.62em 'Libre Franklin', sans-serif;
   margin: 0;
 }
 
@@ -39,6 +39,7 @@ body {
 
 .bullet-separated {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
