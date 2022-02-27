@@ -39,6 +39,7 @@ body {
 
 .bullet-separated {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
 }
 
