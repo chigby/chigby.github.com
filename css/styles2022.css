@@ -5,9 +5,16 @@
   --nord-4: #d8dee9;
   --nord-5: #e5e9f0;
   --nord-6: #eceff4;
+  --nord-7: #8fbcbb;
+  --nord-8: #88c0d0;
+  --nord-9: #81a1c1;
+  --nord-10: #5e81ac;
+  --nord-14: #a3be8c;
+  --nord-15: #b48ead;
   --nord-0: #2e3440;
   --background-color: var(--nord-6);
   --main-background: #fff;
+  --accent-color: var(--nord-10);
   --text-color: var(--nord-3);
   --text-color-alt: var(--nord-1);
   --subtle-color: var(--nord-4);
@@ -59,6 +66,14 @@ main {
   padding: 1.66rem;
 }
 
+main a {
+  color: var(--accent-color);
+}
+
+main a:hover {
+  text-decoration: none;
+}
+
 footer {
   border-top: solid 2px var(--subtle-color);
   padding: 2rem 0;
@@ -101,6 +116,7 @@ footer {
   border-bottom: 2px solid var(--subtle-color);
   padding-bottom: 1em;
   margin-bottom: 0;
+  margin-top: 0.4em;
 }
 
 .projects .sub {
