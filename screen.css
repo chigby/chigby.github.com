@@ -5,51 +5,17 @@ img, svg, video, canvas, audio, iframe, embed, object {
   max-width: 100%;
 }
 
+:root {
+  color-scheme: dark;
+}
+
 ul, li { margin: 0; padding: 0; }
 ul { list-style: none; }
 
 body {
-  color: rgba(0, 0, 0, .9);
+  color: CanvasText;
   font:1.0em/1.62em 'Libre Franklin', sans-serif;
   margin: 0;
-}
-
-.container {
-  width: min(90%, 60rem);
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-  grid-template-rows: auto;
-  grid-gap: 1rem;
-}
-
-.header {
-  grid-column: 1 / -1;
-}
-
-.main-footer {
-  border-top: solid 1px #999;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  grid-column: 1 / -1;
-  padding-block: 1rem;
-}
-
-.webring-icon {
-  height: 32px;
-  width: 32px;
-}
-
-.bullet-separated {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-ul.bullet-separated li + li::before {
-  content: "\2022 ";
-  margin-left: 0.25em;
 }
 
 h2 {
@@ -65,7 +31,7 @@ h3 {
 }
 
 a {
-  color: rgba(0, 0, 0, 1);
+  color: CanvasText;
   text-decoration: underline;
   text-decoration-color: red;
   -webkit-text-decoration-color: red;
@@ -78,3 +44,62 @@ a:hover {
 p {
   margin: 0;
 }
+
+.container {
+  width: min(90%, 60rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+.footer-container {
+  width: min(90%, 60rem);
+  margin-inline: auto;
+}
+
+.header {
+  grid-column: 1 / -1;
+}
+
+.header p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.main-footer {
+  background: #eee;
+  border-top: solid 1px #999;
+  padding: 30px 0;
+  margin-top: 2rem;
+}
+
+.main-footer h3 {
+  font-style: unset;
+  font-weight: initial;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.webring {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.webring-icon {
+  height: 32px;
+  width: 32px;
+}
+
+ul.bullet-separated li {
+  display: inline;
+  list-style: none;
+}
+ul.bullet-separated li:not(:last-child):after { content: "\2022 ";  }
+
+/* ul.bullet-separated li + li::before { */
+/*   content: "\2022 "; */
+/*   margin-left: 0.25em; */
+/* } */
