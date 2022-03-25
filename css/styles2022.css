@@ -12,12 +12,38 @@
   --nord-14: #a3be8c;
   --nord-15: #b48ead;
   --nord-0: #2e3440;
-  --background-color: var(--nord-6);
-  --main-background: #fff;
-  --accent-color: var(--nord-10);
-  --text-color: var(--nord-3);
+  --background-color: hsl(0, 0%, 98%);
+  --accent-color: hsl(338, 47%, 43%);
+  --accent-color-fuller: hsl(352,68%,64%);
+  --text-color: hsl(0, 0%, 19%);
+  --text-color-alt: var(--nord-1);
+  --subtle-color: hsl(0, 0%, 91%);
+  --invert-amount: 90%;
+  --uninvert-amount: 0%;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root:not([data-color-theme]) {
+    --background-color: var(--nord-0);
+    --accent-color: var(--nord-7);
+    --accent-color-fuller: var(--nord-8);
+    --text-color: var(--nord-6);
+    --text-color-alt: var(--nord-1);
+    --subtle-color: var(--nord-4);
+    --invert-amount: 0%;
+    --uninvert-amount: 90%;
+  }
+}
+
+[data-color-theme=dark] {
+  --background-color: var(--nord-0);
+  --accent-color: var(--nord-7);
+  --accent-color-fuller: var(--nord-8);
+  --text-color: var(--nord-6);
   --text-color-alt: var(--nord-1);
   --subtle-color: var(--nord-4);
+  --invert-amount: 0%;
+  --uninvert-amount: 90%;
 }
 
 *, *:before, *:after { box-sizing: border-box; }
@@ -28,6 +54,24 @@ blockquote, body, dd, dl, figure, h1, h2, h3, h4, p {
 
 h1, h2, h3 {
   line-height: 1.2em;
+}
+
+a {
+  transition: outline .1s linear;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--accent-color-fuller);
+  text-decoration: none;
+}
+
+a:focus {
+  background: var(--text-color);
+  color: var(--background-color);
+  outline: .25em solid var(--text-color);
+  text-decoration: none;
 }
 
 body {
@@ -41,6 +85,18 @@ body {
 .webring-icon {
   height: 32px;
   width: 32px;
+}
+
+.webring-link {
+  display: block;
+}
+
+.webring-link img {
+  filter: invert(var(--uninvert-amount));
+}
+
+.webring-link:focus img {
+  filter: invert(var(--invert-amount));
 }
 
 header {
@@ -61,22 +117,17 @@ header {
   display: inline;
 }
 
-main {
-  background-color: var(--main-background);
-  padding: 1.66rem;
-}
-
-main a {
-  color: var(--accent-color);
-}
-
-main a:hover {
-  text-decoration: none;
+.content-main {
+  padding-top: 2rem;
+  font-size: 1.125rem;
 }
 
 footer {
-  border-top: solid 2px var(--subtle-color);
   padding: 2rem 0;
+}
+
+footer a:hover {
+  text-decoration: none;
 }
 
 .bullet-separated {
@@ -120,7 +171,7 @@ footer {
 }
 
 .projects .sub {
-  color: var(--text-color-alt);
+  color: var(--text-color);
   display: block;
   font-size: .85em;
   margin-top: .4em;
