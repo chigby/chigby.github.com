@@ -1,5 +1,5 @@
 *, *:before, *:after { box-sizing: border-box; }
-body { margin: 0; font-family: 'Consolas', monospace; color: #444;}
+body { margin: 0; font-family: 'Consolas', monospace; color: var(--text-color);}
 
 .no-whitespace { padding: 0; margin: 0;}
 
@@ -35,6 +35,6 @@ body { margin: 0; font-family: 'Consolas', monospace; color: #444;}
 .lh-copy  { line-height: 1.5; }
 .lh-title { line-height: 1.25; }
 
-.green-bg { background-color: #575; }
-.purple-bg { background: rgb(145, 76, 201); }
-.white { color: white; }
+.green-bg { background-color: var(--secondary-color); }
+.purple { background-color: var(--purple-color); color: var(--purple-fg); }
+.white { color: var(--secondary-color-fg); }

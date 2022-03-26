@@ -1,5 +1,5 @@
 *, *:before, *:after { box-sizing: border-box; }
-body { margin: 0; font-family: 'Consolas', monospace; color: #444;}
+body { margin: 0; font-family: 'Consolas', monospace; color: var(--text-color);}
 
 .petr-grid figure {
   display: grid;
