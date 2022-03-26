@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles2022.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <script src="theme.js" defer></script>
   </head>
   <body>
       <header>
@@ -83,6 +84,26 @@
                   <a href="resume.pdf">Résumé</a> (PDF, 44kb)
               </li>
           </ul>
+          <div class="theme-container" aria-labelledby="label-theme-toggle">
+              <p id="label-theme-toggle">
+                  Choose a theme:
+              </p>
+              <ul class="bullet-separated">
+                  <li>
+                      <input type="radio" id="theme-toggle-light" name="theme-toggle" value="light">
+                      <label for="theme-toggle-light">Light</label>
+                  </li>
+                  <li>
+                      <input type="radio" id="theme-toggle-dark" name="theme-toggle" value="dark">
+                      <label for="theme-toggle-dark">Dark</label>
+                  </li>
+                  <li>
+                      <input type="radio" id="theme-toggle-system" name="theme-toggle" value="system">
+                      <label for="theme-toggle-system">System</label>
+                  </li>
+              </ul>
+          </div>
+
       </footer>
   </body>
 </html>

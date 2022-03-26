@@ -1,5 +1,5 @@
 :root {
-  color-scheme: light dark;
+  --color-scheme: light;
   --nord-1: #3b4252;
   --nord-3: #4c566a;
   --nord-4: #d8dee9;
@@ -24,6 +24,7 @@
 
 @media(prefers-color-scheme: dark) {
   :root:not([data-color-theme]) {
+    --color-scheme: dark;
     --background-color: var(--nord-0);
     --accent-color: var(--nord-7);
     --accent-color-fuller: var(--nord-8);
@@ -36,6 +37,7 @@
 }
 
 [data-color-theme=dark] {
+  --color-scheme: dark;
   --background-color: var(--nord-0);
   --accent-color: var(--nord-7);
   --accent-color-fuller: var(--nord-8);
@@ -44,6 +46,10 @@
   --subtle-color: var(--nord-4);
   --invert-amount: 0%;
   --uninvert-amount: 90%;
+}
+
+:root {
+  color-scheme: var(--color-scheme);
 }
 
 *, *:before, *:after { box-sizing: border-box; }
@@ -175,4 +181,9 @@ footer a:hover {
   display: block;
   font-size: .85em;
   margin-top: .4em;
+}
+
+.theme-container {
+  display: flex;
+  flex-direction: column;
 }
