@@ -34,7 +34,7 @@
     --accent-color-fuller: var(--nord-8);
     --text-color: var(--nord-6);
     --text-color-alt: var(--nord-1);
-    --subtle-color: var(--nord-4);
+    --subtle-color: var(--nord-3);
     --invert-amount: 0%;
     --uninvert-amount: 90%;
     --secondary-color: var(--nord-1);
@@ -51,7 +51,7 @@
   --accent-color-fuller: var(--nord-8);
   --text-color: var(--nord-6);
   --text-color-alt: var(--nord-1);
-  --subtle-color: var(--nord-4);
+  --subtle-color: var(--nord-3);
   --invert-amount: 0%;
   --uninvert-amount: 90%;
   --secondary-color: var(--nord-1);
