@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/css/post.css" type="text/css">
     </head>
     <body>
-        <script>!function(){function e(e){"system"===e?delete document.documentElement.dataset.colorTheme:document.documentElement.dataset.colorTheme=e}window.__setPreferredTheme=function(t){e(t);try{localStorage.setItem("theme",JSON.stringify(t))}catch(e){}};try{preferredTheme=JSON.parse(localStorage.getItem("theme"))}catch(e){}e(preferredTheme)}();</script>
+        <script>!function(){function e(e){"system"===e?delete document.documentElement.dataset.colorTheme:["light","dark"].includes(e)&&(document.documentElement.dataset.colorTheme=e)}window.__setPreferredTheme=function(t){e(t);try{localStorage.setItem("theme",JSON.stringify(t))}catch(e){}};try{preferredTheme=JSON.parse(localStorage.getItem("theme"))}catch(e){}e(preferredTheme)}();</script>
         <div id="page" class="site"><main id="main" class="site-main" role="main">
             <article class="font-serif container mx-auto lh-copy">
                 <header>

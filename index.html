@@ -17,7 +17,7 @@
            function applyTheme(newValue) {
                if (newValue === 'system') {
                    delete document.documentElement.dataset.colorTheme;
-               } else {
+               } else if (['light', 'dark'].includes(newValue)) {
                    document.documentElement.dataset.colorTheme = newValue;
                }
            }
