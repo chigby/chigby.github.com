@@ -1,21 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>{{ title }}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="/css/colors.css">
-        <link rel="stylesheet" href="/css/universal.css" type="text/css">
-    </head>
-    <body>
-        {% set js %}
-        {% include "applytheme.js" %}
-        {% endset %}
-        <script>{{ js | jsmin | safe }}</script>
-        <div id="page" class="site">
-            <main id="main" class="site-main" role="main">
-                {{ content | safe }}
-            </main>
-        </div>
-    </body>
-</html>
+---
+layout: base-page
+extra_styles:
+  - universal.css
+---
+<div id="page" class="site">
+    <main id="main" class="site-main" role="main">
+        {{ content | safe }}
+    </main>
+</div>

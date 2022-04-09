@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="/css/colors.css">
+        {% for url in extra_styles -%}
+            <link rel="stylesheet" href="/css/{{ url }}" />
+        {% endfor -%}
+        {% for url in inline_styles -%}
+            {% set css %}
+                {% include "css/" + url %}
+            {% endset %}
+            <style>
+             {{ css | cssmin | safe }}
+            </style>
+        {% endfor -%}
+    </head>
+    <body>
+        {% set js %}
+            {% include "applytheme.js" %}
+        {% endset %}
+        <script>{{ js | jsmin | safe }}</script>
+        {{ content | safe }}
+    </body>
+</html>
