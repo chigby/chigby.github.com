@@ -34,6 +34,9 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   eleventyConfig.addPassthroughCopy("src/**/*.txt");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
   return {
+    templateFormats: [
+      "njk",
+    ],
     dir: {
       input: "src",
       includes: "_includes",
