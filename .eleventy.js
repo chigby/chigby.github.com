@@ -23,11 +23,13 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   eleventyConfig.addPassthroughCopy("src/darken");
   eleventyConfig.addPassthroughCopy("src/offsetCipher");
   eleventyConfig.addPassthroughCopy("src/pq");
+  eleventyConfig.addPassthroughCopy("src/twine");
 
   // assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/vid");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/**/*.txt");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
