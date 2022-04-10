@@ -1,4 +1,6 @@
-let preferredTheme = JSON.parse(localStorage.getItem('theme'));
+let storedTheme = localStorage.getItem('theme');
+if (!storedTheme) { storedTheme = '""'; } else { console.log("stored theme is", storedTheme); }
+let preferredTheme = JSON.parse(storedTheme);
 document.querySelectorAll('input[name="theme-toggle"]').forEach(element => {
   if (element.value == preferredTheme) { element.checked = true; }
   element.addEventListener("change", e => {

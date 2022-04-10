@@ -14,7 +14,7 @@
   };
   // detect saved theme
   try {
-    preferredTheme = JSON.parse(localStorage.getItem('theme'));
+    let preferredTheme = JSON.parse(localStorage.getItem('theme'));
+    applyTheme(preferredTheme);
   } catch (err) {}
-  applyTheme(preferredTheme);
 })();
