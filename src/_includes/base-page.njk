@@ -16,6 +16,11 @@
              {{ css | cssmin | safe }}
             </style>
         {% endfor -%}
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        {% for script in extra_js %}
+            <script type="text/javascript" src="js/{{ script }}" defer>
+        {% endfor %}
     </head>
     <body>
         {% set js %}
