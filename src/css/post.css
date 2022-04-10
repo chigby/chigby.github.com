@@ -16,7 +16,7 @@ h3 {
 
 h3::after {
   content: '\2767';
-  font: 1.5em/0.5em sans-serif;
+  font: 1.3em/0.5em sans-serif;
   padding-left: 0.5rem;
   position: relative;
   top: 3px;
