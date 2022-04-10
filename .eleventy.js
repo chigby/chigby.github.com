@@ -20,10 +20,12 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   });
 
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/fonts");
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/darken");
   eleventyConfig.addPassthroughCopy("src/**/*.txt");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
-  //eleventyConfig.addPassthroughCopy({ 'src/fonts': 'assets/fonts' });
   return {
     dir: {
       input: "src",
