@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {%- if preloads -%}
+            {% for preload in preloads %}
+                <link rel="preload" as="{{ preload.as }}" type="{{ preload.type }}" href="{{ preload.href }}" {% if preload.crossorigin %}crossorigin=""{% endif %}>
+            {%- endfor -%}
+        {%- endif -%}
+        <link rel="stylesheet" href="/css/colors.css">
+        {% for url in extra_styles -%}
+            <link rel="stylesheet" href="/css/{{ url }}" />
+        {% endfor -%}
+        {%- if inline_styles -%}
+            {% set css %}
+                {% for url in inline_styles %}
+                    {% include "css/" + url %}
+                {% endfor %}
+            {% endset %}
+            <style>
+             {{ css | cssmin | safe }}
+            </style>
+        {%- endif -%}
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        {% for script in extra_js %}
+            <script type="text/javascript" src="js/{{ script }}" defer>
+        {% endfor %}
+    </head>
+    <body>
+        {% set js %}
+            {% include "applytheme.js" %}
+        {% endset %}
+        <script>{{ js | jsmin | safe }}</script>
+        {{ content | safe }}
+    </body>
+</html>

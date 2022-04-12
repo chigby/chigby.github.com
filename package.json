@@ -1,0 +1,26 @@
+{
+  "name": "chigby",
+  "version": "1.0.0",
+  "description": "An Elaborate Ruse",
+  "main": "theme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chigby/chigby.github.com.git"
+  },
+  "author": "Cameron Higby-Naquin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chigby/chigby.github.com/issues"
+  },
+  "homepage": "https://github.com/chigby/chigby.github.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "clean-css": "^5.3.0",
+    "terser": "^5.12.1"
+  }
+}

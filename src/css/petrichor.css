@@ -1,0 +1,14 @@
+*, *:before, *:after { box-sizing: border-box; }
+body { margin: 0; font-family: 'Consolas', monospace; color: var(--text-color);}
+
+.petr-grid figure {
+  display: grid;
+  align-items: center;
+  justify-content:center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 600px));
+}
+
+.petr-grid figure > img {
+  object-fit: cover;
+  width: 100%;
+}
