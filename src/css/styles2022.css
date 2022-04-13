@@ -8,28 +8,8 @@ h1, h2, h3 {
   line-height: 1.2em;
 }
 
-a {
-  transition: outline .1s linear;
-  color: var(--accent-color);
-  text-decoration: underline;
-}
-
-a:hover {
-  color: var(--accent-color-fuller);
-  text-decoration: none;
-}
-
-a:focus {
-  background: var(--text-color);
-  color: var(--background-color);
-  outline: .25em solid var(--text-color);
-  text-decoration: none;
-}
-
 body {
-  color: var(--text-color);
   font: 1.0em/1.62em 'Libre Franklin', sans-serif;
-  background-color: var(--background-color);
   margin: auto;
   width: min(90%, 60rem);
 }

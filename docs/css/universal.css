@@ -1,5 +1,5 @@
 *, *:before, *:after { box-sizing: border-box; }
-body { margin: 0; font-family: 'Consolas', monospace; color: var(--text-color); background-color: var(--background-color);}
+body { margin: 0; font-family: 'Consolas', monospace; }
 
 .no-whitespace { padding: 0; margin: 0;}
 

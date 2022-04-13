@@ -63,3 +63,30 @@
 :root {
   color-scheme: var(--color-scheme);
 }
+
+a {
+  transition: outline .1s linear;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--accent-color-fuller);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--purple-color);
+}
+
+a:focus {
+  background: var(--text-color);
+  color: var(--background-color);
+  outline: .25em solid var(--text-color);
+  text-decoration: none;
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
