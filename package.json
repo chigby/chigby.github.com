@@ -5,6 +5,7 @@
   "main": "theme.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "cc": "node b.js",
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy"
   },
@@ -19,8 +20,11 @@
   },
   "homepage": "https://github.com/chigby/chigby.github.com#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "clean-css": "^5.3.0",
     "terser": "^5.12.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-upgrade-help": "^2.0.5"
   }
 }
