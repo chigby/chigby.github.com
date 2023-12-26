@@ -5,16 +5,16 @@
     caption=none,
     attrs={}
 ) -%}
-    {%- set rendered = _render_data(data) %}
+    {%- set rendered = _render_data(data) -%}
     <figure {{ util.as_attrs(attrs) }}>
         <div>
             {{- rendered | trim | safe -}}
         </div>
         {%- if caption -%}
             {{- caption | mdInline | safe -}}
-        {% endif %}
+        {%- endif -%}
     </figure>
-{% endmacro %}
+{%- endmacro %}
 
 {% macro iframe(
     src,
