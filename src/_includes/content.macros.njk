@@ -1,0 +1,25 @@
+{% import "util.macros.njk" as util %}
+
+{% macro iframe(
+    src,
+    title,
+    width=none,
+    height=none,
+    span=none
+) %}
+    {%- set width = width or 560 -%}
+    {%- set height = height or 315 -%}
+    {%- set style = {
+        '--ratio': [width, height] | join('/'),
+        '--span': span
+    } | styles -%}
+    {%- set attrs = {
+        'src': src,
+        'title': title,
+        'height': height,
+        'width': width,
+        'frameborder': '0',
+        'style': style
+    } -%}
+    <iframe {{ util.as_attrs(attrs) }}></iframe>
+{% endmacro %}

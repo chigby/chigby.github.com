@@ -1,6 +1,8 @@
 const { minify } = require('terser');
 const CleanCSS = require("clean-css");
 
+const configUtils = require('./src/plugins/utils');
+
 module.exports = function(eleventyConfig) {  // Set custom directories for input, output, includes, and data
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
     code,
@@ -18,6 +20,9 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
+
+  // plugins
+  eleventyConfig.addPlugin(configUtils);
 
   // separate projects included fully
   eleventyConfig.addPassthroughCopy("src/darken");

@@ -1,0 +1,22 @@
+---
+title: Enwound 2023
+layout: rime
+hoagies:
+  src: https://bandcamp.com/EmbeddedPlayer/album=203876381/size=small/bgcol=ffffff/linkcol=2ebd35/transparent=true/
+  title: hoagies
+---
+<header class="full">
+    <p>
+        <span>Ruins</span><br>Crumbling remnants of decades of social-media poisoning
+    </p>
+</header>
+
+{% import "content.macros.njk" as content %}
+{{ content.iframe(
+    src=hoagies.src,
+    title=hoagies.title,
+    width=509,
+    height=42
+)}}
+
+<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=203876381/size=small/bgcol=ffffff/linkcol=2ebd35/transparent=true/" seamless><a href="https://dancewiththedead.bandcamp.com/album/driven-to-madness">Driven to Madness by DANCE WITH THE DEAD</a></iframe>

@@ -6,8 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cc": "node b.js",
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "eleventy:serve": "npx @11ty/eleventy --serve",
+    "eleventy": "npx @11ty/eleventy",
+    "sass": "sass src/scss:docs/css",
+    "watch:sass": "sass --watch src/scss:docs/css",
+    "serve": "npm-run-all -p sass eleventy:serve watch:*"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "clean-css": "^5.3.0",
+    "cssremedy": "^0.1.0-beta.2",
+    "npm-run-all2": "^6.1.1",
+    "sass": "^1.69.5",
     "terser": "^5.12.1"
   },
   "dependencies": {
