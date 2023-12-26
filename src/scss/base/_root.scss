@@ -1,4 +1,16 @@
+@use 'sass:meta';
+@use '../config/colors';
+
 html {
   font-family: system-ui, sans-serif;
   font-weight: normal;
+
+  @each $name, $value in meta.module-variables('colors') {
+    --#{$name}: #{$value};
+  }
+
+  @include colors.theme;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
 }

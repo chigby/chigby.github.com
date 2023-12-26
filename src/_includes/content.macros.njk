@@ -1,5 +1,21 @@
 {% import "util.macros.njk" as util %}
 
+{% macro figure(
+    data=none,
+    caption=none,
+    attrs={}
+) -%}
+    {%- set rendered = _render_data(data) %}
+    <figure {{ util.as_attrs(attrs) }}>
+        <div>
+            {{- rendered | trim | safe -}}
+        </div>
+        {%- if caption -%}
+            {{- caption | mdInline | safe -}}
+        {% endif %}
+    </figure>
+{% endmacro %}
+
 {% macro iframe(
     src,
     title,
@@ -22,4 +38,22 @@
         'style': style
     } -%}
     <iframe {{ util.as_attrs(attrs) }}></iframe>
+{% endmacro %}
+
+
+{% macro _render_data(
+    data
+)-%}
+    {%- for item in data -%}
+        {%- if item.iframe -%}
+            {{- iframe(
+                item.iframe,
+                item.title or 'embed',
+                item.width,
+                item.height,
+                item.span
+            ) -}}
+        {% else %}
+        {% endif %}
+    {% endfor %}
 {% endmacro %}

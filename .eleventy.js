@@ -2,6 +2,7 @@ const { minify } = require('terser');
 const CleanCSS = require("clean-css");
 
 const configUtils = require('./src/plugins/utils');
+const typeUtils = require('./src/plugins/type');
 
 module.exports = function(eleventyConfig) {  // Set custom directories for input, output, includes, and data
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
@@ -23,6 +24,7 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
 
   // plugins
   eleventyConfig.addPlugin(configUtils);
+  eleventyConfig.addPlugin(typeUtils);
 
   // separate projects included fully
   eleventyConfig.addPassthroughCopy("src/darken");
@@ -39,8 +41,10 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   eleventyConfig.addPassthroughCopy("src/**/*.txt");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
   return {
+    markdownTemplateEngine: 'njk',
     templateFormats: [
       "njk",
+      "md"
     ],
     dir: {
       input: "src",
