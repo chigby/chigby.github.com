@@ -1,3 +1,4 @@
+{%- import 'util.macros.njk' as util -%}
 <!doctype html>
 <html lang="en">
     <head>
@@ -7,8 +8,13 @@
         <link href="/css/rime.css" rel="stylesheet"/>
     </head>
     <body>
-        <main class="breakout">
-            {% block main %}{{ content | safe }}{% endblock %}
+        <main {{ util.as_attrs(attrs.main) }}>
+            {% block main %}
+                <header id="page-header">
+                    <h1>{{ title }}</h1>
+                </header>
+                {{ content | safe }}
+            {% endblock %}
         </main>
     </body>
 </html>
