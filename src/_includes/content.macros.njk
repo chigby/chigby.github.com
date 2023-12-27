@@ -11,7 +11,9 @@
             {{- rendered | trim | safe -}}
         </div>
         {%- if caption -%}
-            {{- caption | mdInline | safe -}}
+            <figcaption>
+                {{- caption | mdInline | safe -}}
+            </figcaption>
         {%- endif -%}
     </figure>
 {%- endmacro %}
