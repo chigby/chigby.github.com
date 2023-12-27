@@ -40,6 +40,7 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/**/*.txt");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("src/CNAME");
   return {
     markdownTemplateEngine: 'njk',
     templateFormats: [
