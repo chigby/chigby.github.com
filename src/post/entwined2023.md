@@ -17,8 +17,6 @@ hoagies:
 ---
 {% import "content.macros.njk" as content %}
 
-And lo, when the Imperium marches.....
-
 ## Retro/cosmic dark ambient
 
 {{ content.figure(kirkwood, caption="Souls that Dance on The Edge of a Sword", attrs={class: "popout"}) }}
