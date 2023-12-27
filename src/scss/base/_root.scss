@@ -1,5 +1,6 @@
 @use 'sass:meta';
 @use '../config/colors';
+@use '../config/sizes';
 
 html {
   font-family: system-ui, sans-serif;
@@ -10,6 +11,7 @@ html {
   }
 
   @include colors.theme;
+  @include sizes.space;
 
   background-color: var(--background-color);
   color: var(--text-color);
