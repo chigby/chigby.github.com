@@ -1,0 +1,9 @@
+.a-page {
+  display: grid;
+  row-gap: var(--spacer);
+  margin: 0;
+
+  :where(&) > * {
+    margin-block: 0;
+  }
+}
