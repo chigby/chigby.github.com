@@ -43,11 +43,15 @@ $mark-dark: color.change($accent-dark, $alpha: 0.2);
   --mark: var(--mark-light);
   --mark-text: var(--text);
   --shadow: hsl(0deg 0% 0% / 12.5%);
+
+  --link-color: var(--action);
+  --link-active: var(--active);
 }
 
 @mixin theme {
   @include light;
 
-  --action: var(--accent-text);
+  // applications of color
+  --action: var(--accent-color);
   --active: var(--complement);
 }

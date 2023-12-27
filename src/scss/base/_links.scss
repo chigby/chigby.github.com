@@ -1,0 +1,14 @@
+a {
+  &:where(:any-link) {
+    color: var(--link-color);
+  }
+
+  &:where(:visited) {
+    color: var(--link-visited, var(--link-color));
+  }
+
+  &:where(:hover, :focus, :active) {
+    color: var(--link-active);
+    background-color: var(--link-active-bg);
+  }
+}
