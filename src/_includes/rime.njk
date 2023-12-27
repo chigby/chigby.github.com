@@ -7,7 +7,7 @@
         <title>{{ title }}</title>
         <link href="/css/rime.css" rel="stylesheet"/>
     </head>
-    <body>
+    <body {{ util.as_attrs(attrs.body) }}>
         <main {{ util.as_attrs(attrs.main) }}>
             {% block main %}
                 <header id="page-header">
@@ -16,5 +16,6 @@
                 {{ content | safe }}
             {% endblock %}
         </main>
+        {% include "site/footer.njk" %}
     </body>
 </html>
