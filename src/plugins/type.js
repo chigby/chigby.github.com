@@ -11,4 +11,6 @@ const inline = (content) => (content ? marker.renderInline(content.trim()) : "")
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter("mdInline", inline);
+
+  eleventyConfig.setLibrary('md', marker);
 };
