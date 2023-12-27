@@ -1,5 +1,6 @@
 const { minify } = require('terser');
 const CleanCSS = require("clean-css");
+const JSON5 = require('json5');
 
 const configUtils = require('./src/plugins/utils');
 const typeUtils = require('./src/plugins/type');
@@ -25,6 +26,9 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   // plugins
   eleventyConfig.addPlugin(configUtils);
   eleventyConfig.addPlugin(typeUtils);
+
+  // configure json5 support for data files
+  eleventyConfig.addDataExtension('json5', JSON5.parse);
 
   // separate projects included fully
   eleventyConfig.addPassthroughCopy("src/darken");
