@@ -15,6 +15,11 @@ enmarta:
     height: 470
     title: The Hermit by Enmarta
 
+guardians:
+  - iframe: https://www.youtube.com/embed/OeDWjroEPyg?si=axnkXD9J3pmUB2Sb
+    width: 560
+    height: 315
+
 hoagies:
   - iframe: https://bandcamp.com/EmbeddedPlayer/album=203876381/size=small/bgcol=ffffff/linkcol=2ebd35/transparent=true/
     height: 42
@@ -42,6 +47,12 @@ wistful, isolated, dreaming, wakeful, desolate, still.  Also, there is
 a significant amount of viola, which one cannot really object to.  I struggle to pick a favorite track, but "March of the Priests" and "Apokatástasis II" both rule.
 
 {{ content.figure(enmarta, caption="_The Hermit_ by Enmarta", attrs={class: "popout"}) }}
+
+## Most listened-to ten-second sequence
+
+I don't know what this says about me but I became, for a brief time, obsessed the music in this trailer for _The Guardians of the Galaxy Volume 3_, which is a somewhat lugubrious symphonic rendition of ["Since You've Been Gone" by Rainbow](https://www.youtube.com/watch?v=1P17ct4e5OE). Specifically, for reasons unknown, I simply had to figure out what the chord progression was for the sequence starting at 1:27, and in particular exactly what the orchestral bass is doing at 1:33, as a guy is thrown into a enormous white sculpture oozing with yellow fluid.
+
+{{ content.figure(guardians, caption="_Since You've Been Gone_ as imagined by Marvel.  The time from 1:27 to 1:35 (or so) proved a hypnotic earworm and quasi-academic pursuit.", attrs={class: "popout"}) }}
 
 {{ content.figure(
     hoagies,
