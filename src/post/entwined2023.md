@@ -16,6 +16,17 @@ enmarta:
     height: 470
     title: The Hermit by Enmarta
 
+blizzlofi:
+  - iframe: https://www.youtube.com/embed/-uxi6_5cFqw?si=JZvzg8_hbZ0NGqFy
+  - iframe: https://www.youtube.com/embed/P3n8vT49ueg?si=El9uWH4aepLY05TL
+
+pop80s:
+  - iframe: https://www.youtube.com/embed/nNoaXej0Jeg?si=y6ggikCKC22FWE_g
+    width: 800
+    height: 450
+    span: full
+  - iframe
+
 guardians:
   - iframe: https://www.youtube.com/embed/OeDWjroEPyg?si=axnkXD9J3pmUB2Sb
     width: 560
@@ -65,6 +76,12 @@ I don't know what this says about me but I became, for a brief time, obsessed th
 Something about these beats just moves slowly, breathes deeply, and wires my brain up for a state of quasi-active (as in, not fully zonked out-of-it) chilled out vibrations.  It's good!  A very common pick when I'm wanting music but I don't know what to listen to.
 
 {{ content.figure(kalax, caption="_III_ by Kalax", attrs={class: "popout"}) }}
+
+## Ideal soundtrack for grinding gold in Magic Arena (or anything in any game)
+
+It stands to reason that one of the nerdier instantiations of the "lo-fi beats to chillax/study to" trend would be the one that latched onto me.  Very appropriate to pop one of these on (and there [is a lot more](https://www.youtube.com/playlist?list=PLFeA52fxqVTIqDsMhgfNTVwxpSlwjlcDT) where [these came from](https://www.youtube.com/playlist?list=PLY0KbDiiFYeOD_pjiZ3I_RrZzJ2dWAYqj)) and aim oneself at a somewhat pointless yet satisfying goal in some video game and just, let it wash over you.  Quite apropriate that the creators of two games that brought "Grinding" into the mainstream would also create a compelling soundtrack for the general-purpose compulsion to do it.
+
+{{ content.figure(blizzlofi, caption="_World of Warcraft_ and _Diablo_ LoFi beats", attrs={class: "feature"}) }}
 
 {{ content.figure(
     hoagies,
