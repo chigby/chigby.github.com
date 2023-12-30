@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{{ title }}</title>
         <link href="/css/rime.css" rel="stylesheet"/>
+        {% include 'head/og.njk' %}
         <script src="/js/scripts.js" defer></script>
     </head>
     <body {{ util.as_attrs(attrs.body) }}>

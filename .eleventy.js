@@ -1,6 +1,7 @@
 const { minify } = require('terser');
 const CleanCSS = require("clean-css");
 const JSON5 = require('json5');
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 const configUtils = require('./src/plugins/utils');
 const typeUtils = require('./src/plugins/type');
@@ -24,6 +25,7 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   });
 
   // plugins
+  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(configUtils);
   eleventyConfig.addPlugin(typeUtils);
 

@@ -1,6 +1,7 @@
 ---
 title: Entwined 2023
 layout: rime
+description: Year-end musical explorations and reflections on the year 2023.
 attrs:
   main:
     class: content-grid
