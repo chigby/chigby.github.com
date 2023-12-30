@@ -20,28 +20,32 @@ blizzlofi:
   - iframe: https://www.youtube.com/embed/-uxi6_5cFqw?si=JZvzg8_hbZ0NGqFy
   - iframe: https://www.youtube.com/embed/P3n8vT49ueg?si=El9uWH4aepLY05TL
 
+popAsGenre:
+  - iframe: https://open.spotify.com/embed/playlist/7fWKjpqifDaYcFCsc30JBJ?utm_source=generator
+    height: 352
+    width: 100%
 pop80s:
   - iframe: https://www.youtube.com/embed/nNoaXej0Jeg?si=y6ggikCKC22FWE_g
-    width: 800
-    height: 450
-    span: full
-  - iframe
 
 guardians:
   - iframe: https://www.youtube.com/embed/OeDWjroEPyg?si=axnkXD9J3pmUB2Sb
     width: 560
     height: 315
 
+bowie:
+  - iframe: https://www.youtube.com/embed/_a6XVE-upEQ?si=IyBWCQRgQ-Q8j5kX
+
 kalax:
   - iframe: https://bandcamp.com/EmbeddedPlayer/album=393430288/size=large/bgcol=333333/linkcol=fe7eaf/tracklist=false/artwork=small/transparent=true/
     width: 560
     height: 120
 
-hoagies:
-  - iframe: https://bandcamp.com/EmbeddedPlayer/album=203876381/size=small/bgcol=ffffff/linkcol=2ebd35/transparent=true/
-    height: 42
-    width: 509
-    title: hoagies
+taylorSwift:
+  - iframe: https://www.youtube.com/embed/gp1MR2WAAXY?si=yWRL-15B63Bcw6oF
+
+ulver:
+  - iframe: https://www.youtube.com/embed/NcsTTR9tcMk?si=QHQuh5cqYZ_QlsPS
+
 ---
 {% import "content.macros.njk" as content %}
 
@@ -77,14 +81,52 @@ Something about these beats just moves slowly, breathes deeply, and wires my bra
 
 {{ content.figure(kalax, caption="_III_ by Kalax", attrs={class: "popout"}) }}
 
+## Pop history anthologies
+
+Good to get in touch with the roots of the world (or what feels like the world) of the music of one's youth, but at an age where one feels less need to apply enormous amounts of judgment.  The past couple years, actually, feel like they've been eras of being able to reach back into the past and unseal the latent and suppressed enjoyment of pop music.  It feels good, you know?
+
+{{ content.figure(popAsGenre, caption="Fluxblog's _The Origin of Pop-as-Genre_ Playlist.  See also the [accompanying blog post](http://www.fluxblog.org/the-origin-of-pop-as-genre-1976-1996/).", attrs={class: "popout"}) }}
+
+Also adding this Youtube video which was recommended to me by an algorithm one late night which I did have a hard time turning off once I started it up.
+
+{{ content.figure(pop80s, caption="_most popular song each month since january 1980_ video -- data source of unknown reliability", attrs={class:"popout"}) }}
+
+## Year's best re-release of a song using the incredibly powerful I-V-vi-IV chord progression
+
+What more can one say, really?
+
+{{ content.figure(
+    taylorSwift,
+    caption="_Out of the Woods (Taylor's Version)_ by Taylor Swift",
+    attrs={class: "popout"}
+) }}
+
 ## Ideal soundtrack for grinding gold in Magic Arena (or anything in any game)
 
 It stands to reason that one of the nerdier instantiations of the "lo-fi beats to chillax/study to" trend would be the one that latched onto me.  Very appropriate to pop one of these on (and there [is a lot more](https://www.youtube.com/playlist?list=PLFeA52fxqVTIqDsMhgfNTVwxpSlwjlcDT) where [these came from](https://www.youtube.com/playlist?list=PLY0KbDiiFYeOD_pjiZ3I_RrZzJ2dWAYqj)) and aim oneself at a somewhat pointless yet satisfying goal in some video game and just, let it wash over you.  Quite apropriate that the creators of two games that brought "Grinding" into the mainstream would also create a compelling soundtrack for the general-purpose compulsion to do it.
 
-{{ content.figure(blizzlofi, caption="_World of Warcraft_ and _Diablo_ LoFi beats", attrs={class: "feature"}) }}
+## Web
 
-{{ content.figure(
-    hoagies,
-    caption='Most important hoagie of the year',
-    attrs={class: 'popout'}
-) }}
+> It's the darkest hour, you're 22\
+> The voice of youth, the hour of dread\
+> The darkest hour, and your voice is new\
+> Love is lost, lost is love
+
+This one is new-to-me this year, and it's probably been around for a while, but when have I ever been on the cutting edge of anything?  Sometimes the ephemeral spiderweb that binds us to one another, and to the devouring jaws of time, vibrates on a certain frequency, collects droplets of dew of a certain scent.  This year that scent, that vibration, maybe, was something akin to this song.
+
+> You refuse to talk, but you think like mad\
+> You've cut out your soul and the face of thought\
+> Oh, what have you done? Oh, what have you done?\
+> Oh, what have you done? Oh, what have you done?
+
+{{ content.figure(bowie, caption="_Love is Lost_ by David Bowie", attrs={class:"popout"})}}
+
+## Late-breaking entry from a metal legend who now makes 80s pastiche music
+
+No one told me this came out in the past month.  Maybe no one told you either?  Anyway, here's what's sure to be the track of the moment from the musical mind that brought you [_Nattens Madrigal_](https://www.youtube.com/watch?v=x3WdtS4FZck).  I'm into it!  But I also have a soft spot for musical chameleons.
+
+{{ content.figure(ulver, caption="_Ghost Entry_ by Ulver", attrs={class:"popout"})}}
+
+## Best scores from movies watched
+
+{{ content.figure(blizzlofi, caption="_World of Warcraft_ and _Diablo_ LoFi beats", attrs={class: "feature"}) }}
