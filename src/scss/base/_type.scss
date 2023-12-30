@@ -1,0 +1,18 @@
+blockquote {
+  border-inline-start: thick solid var(--border, currentColor);
+  margin-inline: 0;
+  padding-inline: var(--gap, 1em);
+
+  > :first-child {
+    margin-block-start: 0;
+  }
+
+  > :last-child {
+    margin-block-end: 0;
+  }
+
+  > * {
+    font-size: var(--larger);
+    font-style: italic;
+  }
+}
