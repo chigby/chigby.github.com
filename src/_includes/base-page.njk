@@ -28,12 +28,9 @@
         {% for script in extra_js %}
             <script type="text/javascript" src="js/{{ script }}" defer></script>
         {% endfor %}
+        <script src="/js/scripts.js" defer></script>
     </head>
     <body>
-        {% set js %}
-            {% include "applytheme.js" %}
-        {% endset %}
-        <script>{{ js | jsmin | safe }}</script>
         {{ content | safe }}
     </body>
 </html>

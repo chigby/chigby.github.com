@@ -1,0 +1,7 @@
+<meta property="og:locale" content="{{ meta.og.locale }}" />
+<meta property="og:type" content="{{ og.type or meta.og.type }}" />
+<meta property="og:title" content="{{ title }}" />
+{# TODO: og:image #}
+<meta property="og:description" content="{{ description or site.description }}" />
+<meta property="og:url" content="{{ page.url | absoluteUrl(site.url) }}" />
+<meta property="og:site_name" content="{{ site.title }}" />

@@ -1,0 +1,82 @@
+@use 'sass:color';
+
+// $colors: (
+//   "nord": (
+//     "0": #2e3440,
+//     "1": #3b4252,
+//     "3": #4c566a,
+//     "4": #d8dee9,
+//     "5": #e5e9f0,
+//     "6": #eceff4,
+//     "7": #8fbcbb,
+//     "8": #88c0d0,
+//     "9": #81a1c1,
+//     "10": #5e81ac,
+//     "14": #a3be8c,
+//     "15": #b48ead,
+//   ),
+//   "accent": (
+//     "200": hsl(338, 47%, 43%),
+//     "400": hsl(352, 68%, 64%),
+//   ),
+// );
+
+$dark: #3b4252;
+$darker: #2e3440;
+$light: #eceff4;
+$accent-light: #88c0d0;
+$complement-light: #8fbcbb;
+$accent-dark: #5e81ac;
+$bg-accent-dark: color.mix($accent-dark, $darker, 15%);
+$bg-accent-light: color.mix($accent-light, $light, 15%);
+$complement-dark: #81a1c1; // teal;
+$mark-light: color.change($accent-light, $alpha: 0.2);
+$mark-dark: color.change($accent-dark, $alpha: 0.2);
+
+@mixin light {
+  --background-color: var(--light);
+  --text-color: var(--dark);
+  --accent-color: var(--accent-dark);
+  --accent-text: var(--background-color);
+  --complement: var(--complement-dark);
+  --complement-text: var(--background-color);
+  --mark: var(--mark-light);
+  --mark-text: var(--text);
+  --shadow: hsl(0deg 0% 0% / 12.5%);
+}
+
+@mixin dark {
+  --background-color: var(--darker);
+  --text-color: var(--light);
+  --accent-color: var(--accent-light);
+  --accent-text: var(--background-color);
+  --complement: var(--complement-light);
+  --complement-text: var(--background-color);
+  --mark: var(--mark-dark);
+  --mark-text: var(--text);
+  --shadow: hsl(0deg 0% 0% / 25%);
+}
+
+@mixin theme {
+  @include dark;
+
+  @media (prefers-color-scheme: light) {
+    @include light;
+  }
+
+  &[data-color-theme="dark"] {
+    @include dark;
+  }
+
+  &[data-color-theme="light"] {
+    @include light;
+  }
+
+  // applications of color
+  --action: var(--accent-color);
+  --active: var(--complement);
+
+  // not 100% sure if these are correct to put here
+  --link-color: var(--action);
+  --link-active: var(--active);
+}

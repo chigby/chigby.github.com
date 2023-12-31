@@ -1,0 +1,63 @@
+{% import "util.macros.njk" as util %}
+
+{% macro figure(
+    data=none,
+    caption=none,
+    attrs={}
+) -%}
+    {%- set rendered = _render_data(data) -%}
+    {%- set multi = data and data | length > 1 -%}
+    {%- set gallery = 'multi' if multi else "" -%}
+    <figure {{ util.as_attrs(attrs) }}>
+        <div {{ util.attr_if('data-gallery', gallery) }}>
+            {{- rendered | trim | safe -}}
+        </div>
+        {%- if caption -%}
+            <figcaption>
+                {{- caption | mdInline | safe -}}
+            </figcaption>
+        {%- endif -%}
+    </figure>
+{%- endmacro %}
+
+{% macro iframe(
+    src,
+    title,
+    width=none,
+    height=none,
+    span=none
+) %}
+    {%- set width = width or 560 -%}
+    {%- set height = height or 315 -%}
+    {%- set style = {
+        '--ratio': [width, height] | join('/'),
+        '--span': span
+    } | styles -%}
+    {%- set attrs = {
+        'src': src,
+        'title': title,
+        'height': height,
+        'width': width,
+        'frameborder': '0',
+        'style': style
+    } -%}
+    <iframe {{ util.as_attrs(attrs) }}></iframe>
+{% endmacro %}
+
+
+{% macro _render_data(
+    data
+)-%}
+    {%- for item in data -%}
+        {%- if item.iframe -%}
+            {{- iframe(
+                item.iframe,
+                item.title or 'embed',
+                item.width,
+                item.height,
+                item.span
+            ) -}}
+        {%- else -%}
+        {%- endif -%}
+    {%- endfor -%}
+{%- endmacro %}

@@ -6,8 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cc": "node b.js",
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "eleventy:serve": "npx @11ty/eleventy --serve",
+    "eleventy": "npx @11ty/eleventy",
+    "sass": "sass src/scss:docs/css",
+    "watch:sass": "sass --watch src/scss:docs/css",
+    "serve": "npm-run-all -p sass eleventy:serve watch:*",
+    "js": "esbuild ./src/js --bundle --minify --outfile=docs/js/scripts.js",
+    "watch:js": "esbuild ./src/js --watch --bundle --outfile=docs/js/scripts.js",
+    "build": "npm-run-all -p sass js eleventy"
   },
   "repository": {
     "type": "git",
@@ -21,7 +27,14 @@
   "homepage": "https://github.com/chigby/chigby.github.com#readme",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
     "clean-css": "^5.3.0",
+    "cssremedy": "^0.1.0-beta.2",
+    "esbuild": "^0.19.10",
+    "json5": "^2.2.3",
+    "markdown-it": "^14.0.0",
+    "npm-run-all2": "^6.1.1",
+    "sass": "^1.69.5",
     "terser": "^5.12.1"
   },
   "dependencies": {

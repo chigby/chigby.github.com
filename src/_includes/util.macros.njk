@@ -1,0 +1,10 @@
+{# Attributes #}
+{% macro attr_if(name, value=none) %}
+    {%- if value -%}
+        {{ name }}="{{ value | string }}"
+    {%- endif -%}
+{% endmacro %}
+
+{% macro as_attrs(attrs) %}
+    {%- for name, value in attrs %} {{ attr_if(name, value) }}{%- endfor -%}
+{% endmacro %}
