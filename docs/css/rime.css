@@ -1,0 +1,418 @@
+/* @docs
+label: Core Remedies
+version: 0.1.0-beta.2
+
+note: |
+  These remedies are recommended
+  as a starter for any project.
+
+category: file
+*/
+/* @docs
+label: Box Sizing
+
+note: |
+  Use border-box by default, globally.
+
+category: global
+*/
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* @docs
+label: Line Sizing
+
+note: |
+  Consistent line-spacing,
+  even when inline elements have different line-heights.
+
+links:
+  - https://drafts.csswg.org/css-inline-3/#line-sizing-property
+
+category: global
+*/
+html {
+  line-sizing: normal;
+}
+
+/* @docs
+label: Body Margins
+
+note: |
+  Remove the tiny space around the edge of the page.
+
+category: global
+*/
+body {
+  margin: 0;
+}
+
+/* @docs
+label: Heading Sizes
+
+note: |
+  Switch to rem units for headings
+
+category: typography
+*/
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.83rem;
+}
+
+h6 {
+  font-size: 0.67rem;
+}
+
+/* @docs
+label: H1 Margins
+
+note: |
+  Keep h1 margins consistent, even when nested.
+
+category: typography
+*/
+h1 {
+  margin: 0.67em 0;
+}
+
+/* @docs
+label: Pre Wrapping
+
+note: |
+  Overflow by default is bad...
+
+category: typography
+*/
+pre {
+  white-space: pre-wrap;
+}
+
+/* @docs
+label: Horizontal Rule
+
+note: |
+  1. Solid, thin horizontal rules
+  2. Remove Firefox `color: gray`
+  3. Remove default `1px` height, and common `overflow: hidden`
+
+category: typography
+*/
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+/* @docs
+label: Responsive Embeds
+
+note: |
+  1. Block display is usually what we want
+  2. Remove strange space-below when inline
+  3. Responsive by default
+
+category: embedded elements
+*/
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/* @docs
+label: Aspect Ratios
+
+note: |
+  Maintain intrinsic aspect ratios when `max-width` is applied.
+  `iframe`, `embed`, and `object` are also embedded,
+  but have no intrinsic ratio,
+  so their `height` needs to be set explicitly.
+
+category: embedded elements
+*/
+img, svg, video, canvas {
+  height: auto;
+}
+
+/* @docs
+label: Audio Width
+
+note: |
+  There is no good reason elements default to 300px,
+  and audio files are unlikely to come with a width attribute.
+
+category: embedded elements
+*/
+audio {
+  width: 100%;
+}
+
+/* @docs
+label: Image Borders
+
+note: |
+  Remove the border on images inside links in IE 10 and earlier.
+
+category: legacy browsers
+*/
+img {
+  border-style: none;
+}
+
+/* @docs
+label: SVG Overflow
+
+note: |
+  Hide the overflow in IE 10 and earlier.
+
+category: legacy browsers
+*/
+svg {
+  overflow: hidden;
+}
+
+/* @docs
+label: HTML5 Elements
+
+note: |
+  Default block display on HTML5 elements
+
+category: legacy browsers
+*/
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+/* @docs
+label: Checkbox & Radio Inputs
+
+note: |
+  1. Add the correct box sizing in IE 10
+  2. Remove the padding in IE 10
+
+category: legacy browsers
+*/
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  font-family: system-ui, sans-serif;
+  font-weight: normal;
+  --dark: #3b4252;
+  --darker: #2e3440;
+  --light: #eceff4;
+  --accent-light: #88c0d0;
+  --complement-light: #8fbcbb;
+  --accent-dark: #5e81ac;
+  --bg-accent-dark: #354050;
+  --bg-accent-light: #dde8ef;
+  --complement-dark: #81a1c1;
+  --mark-light: rgba(136, 192, 208, 0.2);
+  --mark-dark: rgba(94, 129, 172, 0.2);
+  --background-color: var(--darker);
+  --text-color: var(--light);
+  --accent-color: var(--accent-light);
+  --accent-text: var(--background-color);
+  --complement: var(--complement-light);
+  --complement-text: var(--background-color);
+  --mark: var(--mark-dark);
+  --mark-text: var(--text);
+  --shadow: hsl(0deg 0% 0% / 25%);
+  --action: var(--accent-color);
+  --active: var(--complement);
+  --link-color: var(--action);
+  --link-active: var(--active);
+  --gap: 1rem;
+  --half-gap: calc(var(--gap) / 2);
+  --shim: calc(var(--gap) / 4);
+  --half-shim: calc(var(--shim) / 2);
+  --spacer: clamp(
+    var(--gap) * 1.5,
+    var(--gap) + 4vw,
+    min(var(--gap) * 6, 20vmin)
+  );
+  --larger: 1.2em;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+@media (prefers-color-scheme: light) {
+  html {
+    --background-color: var(--light);
+    --text-color: var(--dark);
+    --accent-color: var(--accent-dark);
+    --accent-text: var(--background-color);
+    --complement: var(--complement-dark);
+    --complement-text: var(--background-color);
+    --mark: var(--mark-light);
+    --mark-text: var(--text);
+    --shadow: hsl(0deg 0% 0% / 12.5%);
+  }
+}
+html[data-color-theme=dark] {
+  --background-color: var(--darker);
+  --text-color: var(--light);
+  --accent-color: var(--accent-light);
+  --accent-text: var(--background-color);
+  --complement: var(--complement-light);
+  --complement-text: var(--background-color);
+  --mark: var(--mark-dark);
+  --mark-text: var(--text);
+  --shadow: hsl(0deg 0% 0% / 25%);
+}
+html[data-color-theme=light] {
+  --background-color: var(--light);
+  --text-color: var(--dark);
+  --accent-color: var(--accent-dark);
+  --accent-text: var(--background-color);
+  --complement: var(--complement-dark);
+  --complement-text: var(--background-color);
+  --mark: var(--mark-light);
+  --mark-text: var(--text);
+  --shadow: hsl(0deg 0% 0% / 12.5%);
+}
+
+figure {
+  display: grid;
+  gap: 1em;
+  margin-inline: 0;
+  padding: 1em;
+  background-color: var(--shadow);
+}
+
+blockquote {
+  border-inline-start: thick solid var(--border, currentColor);
+  margin-inline: 0;
+  padding-inline: var(--gap, 1em);
+}
+blockquote > :first-child {
+  margin-block-start: 0;
+}
+blockquote > :last-child {
+  margin-block-end: 0;
+}
+blockquote > * {
+  font-size: var(--larger);
+  font-style: italic;
+}
+
+a:where(:any-link) {
+  color: var(--link-color);
+}
+a:where(:visited) {
+  color: var(--link-visited, var(--link-color));
+}
+a:where(:hover, :focus, :active) {
+  color: var(--link-active);
+  background-color: var(--link-active-bg);
+}
+
+img,
+video,
+iframe,
+picture {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: auto var(--ratio);
+}
+
+video,
+iframe {
+  --ratio: 16/ 9;
+}
+
+summary {
+  cursor: pointer;
+}
+
+.content-grid {
+  --gutter: clamp(1rem, 6vw, 3rem);
+  --full: minmax(var(--gutter), 1fr);
+  --content: min(50ch, 100% - var(--gutter) * 2);
+  --popout: minmax(0, 2rem);
+  --feature: minmax(0, 5rem);
+  display: grid;
+  row-gap: 1.5em;
+  grid-template-columns: [full-start] var(--full) [feature-start] var(--feature) [popout-start] var(--popout) [content-start] var(--content) [content-end] var(--popout) [popout-end] var(--feature) [feature-end] var(--full) [full-end];
+}
+.content-grid > * {
+  grid-column: content;
+  margin: 0;
+}
+
+.popout {
+  grid-column: popout;
+}
+
+.feature {
+  grid-column: feature;
+}
+
+.full {
+  grid-column: full;
+}
+
+body > footer {
+  padding: 1rem;
+  text-align: center;
+  padding-block-start: 1rem;
+  border-top: 1.5px solid;
+}
+
+.a-page {
+  display: grid;
+  row-gap: var(--spacer);
+  margin: 0;
+}
+:where(.a-page) > * {
+  margin-block: 0;
+}
+
+#theme-chooser {
+  padding: var(--gap);
+}
+
+[data-gallery] {
+  display: grid;
+  gap: var(--gap, 1em);
+}
+[data-gallery] iframe {
+  width: var(--media-width, 100%);
+  height: var(--media-height, auto);
+}
+[data-gallery] :only-child,
+[data-gallery] :last-child:nth-child(odd):not([style*="--span"] ~ *) {
+  grid-column: 1/-1;
+}
+
+@media (min-width: 35em) {
+  [data-gallery=multi] {
+    grid-template-columns: [full-start] repeat(2, minmax(0, 1fr)) [full-end];
+  }
+  [data-gallery=multi] > * {
+    grid-column: var(--span);
+  }
+}
+
+/*# sourceMappingURL=rime.css.map */
