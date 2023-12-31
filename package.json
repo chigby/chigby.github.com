@@ -12,7 +12,8 @@
     "watch:sass": "sass --watch src/scss:docs/css",
     "serve": "npm-run-all -p sass eleventy:serve watch:*",
     "js": "esbuild ./src/js --bundle --minify --outfile=docs/js/scripts.js",
-    "watch:js": "esbuild ./src/js --watch --bundle --outfile=docs/js/scripts.js"
+    "watch:js": "esbuild ./src/js --watch --bundle --outfile=docs/js/scripts.js",
+    "build": "npm-run-all -p sass js eleventy"
   },
   "repository": {
     "type": "git",
