@@ -15,7 +15,10 @@ enmarta:
     width: 350
     height: 470
     title: The Hermit by Enmarta
-
+opal:
+  - iframe: https://bandcamp.com/EmbeddedPlayer/album=668906073/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/
+    height: 406
+    width: 100%
 blizzlofi:
   - iframe: https://www.youtube.com/embed/-uxi6_5cFqw?si=JZvzg8_hbZ0NGqFy
   - iframe: https://www.youtube.com/embed/P3n8vT49ueg?si=El9uWH4aepLY05TL
@@ -23,7 +26,7 @@ blizzlofi:
 popAsGenre:
   - iframe: https://open.spotify.com/embed/playlist/7fWKjpqifDaYcFCsc30JBJ?utm_source=generator
     height: 352
-    width: 100%
+    width: 650
 pop80s:
   - iframe: https://www.youtube.com/embed/nNoaXej0Jeg?si=y6ggikCKC22FWE_g
 
@@ -36,15 +39,51 @@ bowie:
   - iframe: https://www.youtube.com/embed/_a6XVE-upEQ?si=IyBWCQRgQ-Q8j5kX
 
 kalax:
-  - iframe: https://bandcamp.com/EmbeddedPlayer/album=393430288/size=large/bgcol=333333/linkcol=fe7eaf/tracklist=false/artwork=small/transparent=true/
-    width: 560
+  - iframe: https://bandcamp.com/EmbeddedPlayer/album=393430288/size=large/bgcol=333333/linkcol=fe7eaf/tracklist=false/artwork=small/track=4289216201/transparent=true/
+    width: 100%
     height: 120
 
 taylorSwift:
   - iframe: https://www.youtube.com/embed/gp1MR2WAAXY?si=yWRL-15B63Bcw6oF
+    height: 315
+    width: 560
 
 ulver:
   - iframe: https://www.youtube.com/embed/NcsTTR9tcMk?si=QHQuh5cqYZ_QlsPS
+
+soundtracks:
+  - iframe: https://www.youtube.com/embed/Or-c47eFb-Q?si=BJa04U1gWYEIIZpb
+    width: 800
+    height: 450
+    span: full
+  - iframe: https://www.youtube.com/embed/kMYldMdf8ho?si=zSPrmskdbus-VSzh
+  - iframe: https://www.youtube.com/embed/NpH7_zNjEps?si=b3u5e0oDC96yxvj5
+terminus:
+  - iframe: https://bandcamp.com/EmbeddedPlayer/album=682779827/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/track=3179523090/transparent=true/
+    height: 120
+    width: 100%
+danceWithTheDead:
+  - iframe: https://bandcamp.com/EmbeddedPlayer/album=365385341/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/artwork=small/track=2773073963/transparent=true/
+    width: 100%
+    height: 406
+biolume:
+  - iframe: https://bandcamp.com/EmbeddedPlayer/album=3444603941/size=large/bgcol=333333/linkcol=e99708/tracklist=false/artwork=small/track=1142090951/transparent=true/
+    width: 100%
+    height: 406
+longing:
+  - iframe: https://bandcamp.com/EmbeddedPlayer/album=1075688922/size=large/bgcol=333333/linkcol=ffffff/tracklist=false/artwork=small/transparent=true/
+    width: 100%
+    height: 406
+
+ahab:
+  - iframe: https://bandcamp.com/EmbeddedPlayer/album=3773900352/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/artwork=small/track=3775860606/transparent=true/
+    width: 100%
+    height: 406
+
+feminazgul:
+  - iframe: https://bandcamp.com/EmbeddedPlayer/album=4160526201/size=large/bgcol=333333/linkcol=fe7eaf/artwork=small/track=3777435019/transparent=true/
+    width:  450
+    height: 208
 
 ---
 {% import "content.macros.njk" as content %}
@@ -69,6 +108,12 @@ a significant amount of viola, which one cannot really object to.  I struggle to
 
 {{ content.figure(enmarta, caption="_The Hermit_ by Enmarta", attrs={class: "popout"}) }}
 
+## Hardest to classify dark ambient
+
+Weird vibrations in the puce chasm, mirrors facing mirrors, pyramidal concretions of the soul drift as ash, as seedpods, as loci that circumscribe thought and existence.
+
+{{ content.figure(opal, caption="深淵の反射 by Opal Vessel", attrs={class: "popout"})}}
+
 ## Most listened-to ten-second sequence
 
 I don't know what this says about me but I became, for a brief time, obsessed the music in this trailer for _The Guardians of the Galaxy Volume 3_, which is a somewhat lugubrious symphonic rendition of ["Since You've Been Gone" by Rainbow](https://www.youtube.com/watch?v=1P17ct4e5OE). Specifically, for reasons unknown, I simply had to figure out what the chord progression was for the sequence starting at 1:27, and in particular exactly what the orchestral bass is doing at 1:33, as a guy is thrown into a enormous white sculpture oozing with yellow fluid.
@@ -85,7 +130,7 @@ Something about these beats just moves slowly, breathes deeply, and wires my bra
 
 Good to get in touch with the roots of the world (or what feels like the world) of the music of one's youth, but at an age where one feels less need to apply enormous amounts of judgment.  The past couple years, actually, feel like they've been eras of being able to reach back into the past and unseal the latent and suppressed enjoyment of pop music.  It feels good, you know?
 
-{{ content.figure(popAsGenre, caption="Fluxblog's _The Origin of Pop-as-Genre_ Playlist.  See also the [accompanying blog post](http://www.fluxblog.org/the-origin-of-pop-as-genre-1976-1996/).", attrs={class: "popout"}) }}
+{{ content.figure(popAsGenre, caption="Fluxblog's _The Origin of Pop-as-Genre_ Playlist.  See also the [accompanying blog post](http://www.fluxblog.org/the-origin-of-pop-as-genre-1976-1996/).", attrs={class: "feature"}) }}
 
 Also adding this Youtube video which was recommended to me by an algorithm one late night which I did have a hard time turning off once I started it up.
 
@@ -129,4 +174,70 @@ No one told me this came out in the past month.  Maybe no one told you either?  
 
 {{ content.figure(ulver, caption="_Ghost Entry_ by Ulver", attrs={class:"popout"})}}
 
-## Best scores from movies watched
+## Best scores and music from movies watched
+
+Putting these on here more as "awards" I am "awarding" to particular pieces and less something that I listened to a lot and, as a result, _I_ am receiving some type of award for doing that.  The latter is how I'm assuming Spotify "Wrapped" (upon which this exercise is based) works, though I admit I don't really know.  Come to think of it, a lot of the entries on this page function more similarly to the former.  Well, that's just how it is!
+
+In any case, here we have (1) Basil Poledouris, composer of the soundtracks for _The Hunt for Red October_ and _Conan: The Barbarian_ at it again with his soundtrack for Paul Verhoeven's early medieval plague-em-up, (2) the slab of stoner sludge that, almost as an afterthought, manifested the movie _Mandy_ out of the force of its own existence, and (3) one of the musical numbers from _Footlight Parade_ (I actually think the youtube version below is truncated---watch the whole movie, it's great) which is just overwhelmingly horny for a movie made like 80+ years ago.
+
+{{ content.figure(soundtracks, caption="Music from _Flesh + Blood_, _Mandy_, and _Footlight Parade_", attrs={class: "feature"}) }}
+
+## Earworm that was playing in my head for weeks before I remembered what it was
+
+Honestly, figuring this out finally was one of the most satisfying feelings I've had all year, which sounds bleaker than it is, but no, figuring out stuff is awesome and proof that my brain still works.
+
+{{ content.figure(terminus, caption='"Detonation" from _The Wrath of Code_ by Dan Terminus', attrs={class:"popout"})}}
+
+## Most listened-to synthwave
+
+The gift that keeps on giving is, at some point in the past, I bought one of those Bandcamp sales where a band gives you like 50%+ off of their entire catalog.  And Dance with the Dead's catalog has been very good to me in this regard.  But why?  It's good Halloween music (and, as well we know, "every day is Halloween"), it's boppy, and if I were writing a blurb for the back of their album, I might write: "It gives even the undead a pulse!" or "The music playing in the tape deck of your 80s station wagon just before it's attacked---by the undead!" or "The best undead creature to crash your Halloween party since 'Monster Mash!'"
+
+Do CDs have blurbs?  I don't think they do.
+
+{{ content.figure(danceWithTheDead, caption='_The Shape_ by Dance with the Dead', attrs={class:"popout"})}}
+
+## Ploddingest Metal Melancholy
+
+Thoroughly funerial with sludge tendencies, a viscous whirlpool, an incantation said in sorrow in the depths of the woods.  Truth be told, I do love this kind of music, but it's hard to listen to as much of it as I once did, in the times beyond and before time.  So in a way bringing this sort of energy into my life is getting in touch again with my roots.  But I no longer _meditate_ on this sort of sound in the way I probably did fifteen years hence.
+
+{{ content.figure(longing, caption="_Longing_ by Bell Witch", attrs={class: "popout"})}}
+
+## Deepest Metal Underwater
+
+I'm not going to say this is a wholly different aesthetic experience than the previous album on this list.  I mean, obviously it's not exactly the same.  And I will admit to being drawn to this band because of its allusion to _Moby-Dick_, a book which I dearly love.  But also, this is a great album, there is some very interesting and novel (to me) stuff going on here, it's not straight plodding doom, it's thoroughly heavy with plodding tendencies.  May we be crushed by the pressure of the almighty ocean!
+
+{{ content.figure(ahab, caption="_The Coral Tombs_ by Ahab", attrs={class: "popout"})}}
+
+## Hardest to classify Metal
+
+On the one hand, who cares about classifications?
+
+On the other hand, that's part of the fun here, right?  And is it ever more fun to contemplate how to classify some sound, some song, some album and just have it utterly fail to concretely resolve into anything?  Refracting, fading, blurring, but somehow possessing a singular coherent unity of style that reinforces its difficult-to-classify-ability.  And I think what I love most here is a key component of its style is a strand of resiliency, of uplifting.  Most bands I listen to seem like they want to cut out all such strands from their sound, but here it feels like it's crucial to the art.
+
+Just listen.  Words aren't as valuable.
+
+Apparently this album is part of a trilogy.  Need to get around to absorbing the next two as well.  Also, much respect to anyone out there in 2023 making a trilogy of albums.
+
+{{ content.figure(biolume, caption="_Biolume Part 1_ by Midnight Odyssey", attrs={class: "popout"})}}
+
+## Blackest Metal Night Before the No-Dawn
+
+> a spell to invoke Illa, an aspect of death, to remind us of our own fragility so that we may learn to be strong
+
+I can't resist a Tolkien allusion.  No matter how many bands do this, I have no choice but to support it.
+
+Ending with this one, which is not new to me this year but one I keep on
+returning to.  I was drawn to it for being the only black metal group
+I'm aware of that so prominently features an accordion, but the more I
+listened the more fascinating, complex, and wonderful this album
+became.  It basically has everything I like about black
+metal---intensity, atmosphere, thunder, color---but reconfigured in a
+way that feels and sounds unlike most of what I'm used to: mournful,
+empowered, hope-and-despair entwined.
+
+> in darkness no one reigns\
+> the night has no king\
+> the night has no queen\
+> in darkness no one reigns
+
+{{ content.figure(feminazgul, caption="_No Dawn For Men_ by Feminazgul", attrs={class: "popout"})}}
