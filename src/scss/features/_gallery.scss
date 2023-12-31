@@ -7,7 +7,8 @@
     height: var(--media-height, auto);
   }
 
-  :only-child {
+  :only-child,
+  :last-child:nth-child(odd):not([style*='--span'] ~ *) {
     grid-column: 1 / -1;
   }
 }
