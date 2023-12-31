@@ -105,6 +105,8 @@ What more can one say, really?
 
 It stands to reason that one of the nerdier instantiations of the "lo-fi beats to chillax/study to" trend would be the one that latched onto me.  Very appropriate to pop one of these on (and there [is a lot more](https://www.youtube.com/playlist?list=PLFeA52fxqVTIqDsMhgfNTVwxpSlwjlcDT) where [these came from](https://www.youtube.com/playlist?list=PLY0KbDiiFYeOD_pjiZ3I_RrZzJ2dWAYqj)) and aim oneself at a somewhat pointless yet satisfying goal in some video game and just, let it wash over you.  Quite apropriate that the creators of two games that brought "Grinding" into the mainstream would also create a compelling soundtrack for the general-purpose compulsion to do it.
 
+{{ content.figure(blizzlofi, caption="_World of Warcraft_ and _Diablo_ LoFi beats", attrs={class: "feature"}) }}
+
 ## Web
 
 > It's the darkest hour, you're 22\
@@ -128,5 +130,3 @@ No one told me this came out in the past month.  Maybe no one told you either?  
 {{ content.figure(ulver, caption="_Ghost Entry_ by Ulver", attrs={class:"popout"})}}
 
 ## Best scores from movies watched
-
-{{ content.figure(blizzlofi, caption="_World of Warcraft_ and _Diablo_ LoFi beats", attrs={class: "feature"}) }}
