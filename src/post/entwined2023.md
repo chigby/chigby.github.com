@@ -90,7 +90,7 @@ feminazgul:
 
 ## Favorite retro/cosmic dark ambient
 
-New-to-me artist Jim Kirkwood has apparently beem making this kind of
+New-to-me artist Jim Kirkwood has apparently been making this kind of
 music since time immemorial, so I'm pleased to have been finally
 introduced to it.  Cosmic, weird, disconcerting: is it dark ambient?
 Is it dungeon synth?  Can one enter a strange zone-out realm with
