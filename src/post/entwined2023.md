@@ -120,6 +120,8 @@ I don't know what this says about me but I became, for a brief time, obsessed th
 
 {{ content.figure(guardians, caption="_Since You've Been Gone_ as imagined by Marvel.  The time from 1:27 to 1:35 (or so) proved a hypnotic earworm and quasi-academic pursuit.", attrs={class: "popout"}) }}
 
+Anyway, after much thinking about this, it's an E-flat major chord.
+
 ## Most listened-to for the purpose of chilling out
 
 Something about these beats just moves slowly, breathes deeply, and wires my brain up for a state of quasi-active (as in, not fully zonked out-of-it) chilled out vibrations.  It's good!  A very common pick when I'm wanting music but I don't know what to listen to.
