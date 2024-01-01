@@ -90,7 +90,7 @@ feminazgul:
 
 ## Favorite retro/cosmic dark ambient
 
-New-to-me artist Jim Kirkwood has apparently beem making this kind of
+New-to-me artist Jim Kirkwood has apparently been making this kind of
 music since time immemorial, so I'm pleased to have been finally
 introduced to it.  Cosmic, weird, disconcerting: is it dark ambient?
 Is it dungeon synth?  Can one enter a strange zone-out realm with
@@ -119,6 +119,8 @@ Weird vibrations in the puce chasm, mirrors facing mirrors, pyramidal concretion
 I don't know what this says about me but I became, for a brief time, obsessed the music in this trailer for _The Guardians of the Galaxy Volume 3_, which is a somewhat lugubrious symphonic rendition of ["Since You've Been Gone" by Rainbow](https://www.youtube.com/watch?v=1P17ct4e5OE). Specifically, for reasons unknown, I simply had to figure out what the chord progression was for the sequence starting at 1:27, and in particular exactly what the orchestral bass is doing at 1:33, as a guy is thrown into a enormous white sculpture oozing with yellow fluid.
 
 {{ content.figure(guardians, caption="_Since You've Been Gone_ as imagined by Marvel.  The time from 1:27 to 1:35 (or so) proved a hypnotic earworm and quasi-academic pursuit.", attrs={class: "popout"}) }}
+
+Anyway, after much thinking about this, it's an E-flat major chord.
 
 ## Most listened-to for the purpose of chilling out
 
