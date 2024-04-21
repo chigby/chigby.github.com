@@ -53,7 +53,7 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
       "md"
     ],
     dir: {
-      input: "src",
+      input: "content",
       includes: "_includes",
       data: "_data",
       output: "docs"
