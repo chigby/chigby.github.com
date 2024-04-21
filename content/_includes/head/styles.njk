@@ -1,0 +1,10 @@
+{%- import 'util.macros.njk' as util -%}
+
+{%- for url in styles -%}
+    {% set link_attrs = {
+        'rel': 'stylesheet',
+        'href': [meta.assets.css, url] | join,
+        'media': 'all'
+    } %}
+    <link {{ util.as_attrs(link_attrs) }}/>
+{%- endfor -%}

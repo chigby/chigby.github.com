@@ -5,6 +5,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 const configUtils = require('./src/plugins/utils');
 const typeUtils = require('./src/plugins/type');
+const timeUtils = require('./src/plugins/time');
 
 module.exports = function(eleventyConfig) {  // Set custom directories for input, output, includes, and data
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
@@ -28,6 +29,7 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(configUtils);
   eleventyConfig.addPlugin(typeUtils);
+  eleventyConfig.addPlugin(timeUtils);
 
   // configure json5 support for data files
   eleventyConfig.addDataExtension('json5', JSON5.parse);

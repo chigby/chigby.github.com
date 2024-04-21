@@ -1,0 +1,22 @@
+{%- import 'util.macros.njk' as util -%}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ title }} - {{ site.title }}</title>
+        {% include 'head/styles.njk' %}
+        {% include 'head/og.njk' %}
+        <meta name="description" content="{{ description }}" />
+        <script src="/js/scripts.js" defer></script>
+    </head>
+    <body {{ util.as_attrs(attrs.body) }}>
+        {% block banner %}{% endblock %}
+
+        {% include "site/header.njk" %}
+        <main {{ util.as_attrs(attrs.main) }}>
+            {% block main %}{% include "page/default.njk" %}{% endblock %}
+        </main>
+        {% block footer %}{% include "site/footer.njk" %}{% endblock %}
+    </body>
+</html>

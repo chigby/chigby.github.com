@@ -3,4 +3,7 @@
     locale: "en_US",
     type: "website",
   },
+  assets: {
+    css: "/css/",
+  },
 }
