@@ -8,7 +8,11 @@
     var(--gap) + 4vw,
     min(var(--gap) * 6, 20vmin)
   );
+}
 
+@mixin text {
   // font sizes
   --larger: 1.2em;
+  --line-height: 1.4;
+  --measure: 60ch;
 }

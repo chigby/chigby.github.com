@@ -1,13 +1,18 @@
 @use 'sass:meta';
 @use '../config/colors';
 @use '../config/sizes';
+@use '../config/fonts';
 
 html {
-  font-family: system-ui, sans-serif;
-  font-weight: normal;
-
   @include colors.theme;
   @include sizes.space;
+  @include sizes.text;
+  @include fonts.ui;
+
+  font-family: var(--font-body, var(--ui-sans));
+  font-weight: normal;
+  font-size: max(1em, 18px);
+  line-height: var(--line-height, 1.4);
 
   background-color: var(--background-color);
   color: var(--text-color);
