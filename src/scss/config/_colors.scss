@@ -1,37 +1,42 @@
 @use 'sass:color';
+@use 'sass:map';
 
-// $colors: (
-//   "nord": (
-//     "0": #2e3440,
-//     "1": #3b4252,
-//     "3": #4c566a,
-//     "4": #d8dee9,
-//     "5": #e5e9f0,
-//     "6": #eceff4,
-//     "7": #8fbcbb,
-//     "8": #88c0d0,
-//     "9": #81a1c1,
-//     "10": #5e81ac,
-//     "14": #a3be8c,
-//     "15": #b48ead,
-//   ),
-//   "accent": (
-//     "200": hsl(338, 47%, 43%),
-//     "400": hsl(352, 68%, 64%),
-//   ),
-// );
+$colors: (
+  "nordish": (
+    "dark": #3b4252,
+    "darker": #2e3440,
+    "light": #eceff4,
+    "accent-light": #88c0d0,
+    "complement-light": #8fbcbb,
+    "accent-dark": #5e81ac,
+    "complement-dark": #81a1c1,
+  ),
+  "cloned": (
+    "dark": #444,
+    "darker": #222,
+    "light": oldlace,
+    "accent-light": orange,
+    "complement-light":  skyblue,
+    "accent-dark": darkorange,
+    "complement-dark": steelblue,
+  ),
+);
 
-$dark: #3b4252;
-$darker: #2e3440;
-$light: #eceff4;
-$accent-light: #88c0d0;
-$complement-light: #8fbcbb;
-$accent-dark: #5e81ac;
-$bg-accent-dark: color.mix($accent-dark, $darker, 15%);
-$bg-accent-light: color.mix($accent-light, $light, 15%);
-$complement-dark: #81a1c1; // teal;
-$mark-light: color.change($accent-light, $alpha: 0.2);
-$mark-dark: color.change($accent-dark, $alpha: 0.2);
+@each $name, $values in $colors {
+  [data-palette="#{$name}"] {
+    --dark: #{map.get($values, "dark")};
+    --darker: #{map.get($values, "darker")};
+    --light: #{map.get($values, "light")};
+    --accent-light: #{map.get($values, "accent-light")};
+    --complement-light: #{map.get($values, "complement-light")};
+    --accent-dark: #{map.get($values, "accent-dark")};
+    --complement-dark: #{map.get($values, "complement-dark")};
+    --bg-accent-dark: #{color.mix(map.get($values, "accent-dark"), map.get($values, "darker"), 15%)};
+    --bg-accent-light: #{color.mix(map.get($values, "accent-light"), map.get($values, "light"), 15%)};
+    --mark-light: #{color.change(map.get($values, "accent-light"), $alpha: 0.2)};
+    --mark-dark: #{color.change(map.get($values, "accent-dark"), $alpha: 0.2)}
+  };
+}
 
 @mixin light {
   --background-color: var(--light);

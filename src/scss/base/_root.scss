@@ -6,10 +6,6 @@ html {
   font-family: system-ui, sans-serif;
   font-weight: normal;
 
-  @each $name, $value in meta.module-variables('colors') {
-    --#{$name}: #{$value};
-  }
-
   @include colors.theme;
   @include sizes.space;
 
