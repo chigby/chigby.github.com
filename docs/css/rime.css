@@ -217,20 +217,35 @@ category: legacy browsers
   padding: 0;
 }
 
-html {
-  font-family: system-ui, sans-serif;
-  font-weight: normal;
+[data-palette=nordish] {
   --dark: #3b4252;
   --darker: #2e3440;
   --light: #eceff4;
   --accent-light: #88c0d0;
   --complement-light: #8fbcbb;
   --accent-dark: #5e81ac;
+  --complement-dark: #81a1c1;
   --bg-accent-dark: #354050;
   --bg-accent-light: #dde8ef;
-  --complement-dark: #81a1c1;
   --mark-light: rgba(136, 192, 208, 0.2);
-  --mark-dark: rgba(94, 129, 172, 0.2);
+  --mark-dark: rgba(94, 129, 172, 0.2) ;
+}
+
+[data-palette=malachite] {
+  --dark: #444;
+  --darker: #222;
+  --light: whitesmoke;
+  --accent-light: #44C089;
+  --complement-light: #BE4379;
+  --accent-dark: #2C7F5A;
+  --complement-dark: #BE4379;
+  --bg-accent-dark: #24302a;
+  --bg-accent-light: #daede5;
+  --mark-light: rgba(68, 192, 137, 0.2);
+  --mark-dark: rgba(44, 127, 90, 0.2) ;
+}
+
+html {
   --background-color: var(--darker);
   --text-color: var(--light);
   --accent-color: var(--accent-light);
@@ -254,6 +269,14 @@ html {
     min(var(--gap) * 6, 20vmin)
   );
   --larger: 1.2em;
+  --smaller: 0.8em;
+  --line-height: 1.4;
+  --measure: 60ch;
+  --ui-sans: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-family: var(--font-body, var(--ui-sans));
+  font-weight: normal;
+  font-size: max(1em, 18px);
+  line-height: var(--line-height, 1.4);
   background-color: var(--background-color);
   color: var(--text-color);
 }
@@ -301,6 +324,10 @@ figure {
   background-color: var(--shadow);
 }
 
+[data-type-family=serif] {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+}
+
 blockquote {
   border-inline-start: thick solid var(--border, currentColor);
   margin-inline: 0;
@@ -319,6 +346,8 @@ blockquote > * {
 
 a:where(:any-link) {
   color: var(--link-color);
+  text-decoration-thickness: 0.03875em;
+  text-underline-offset: 0.2em;
 }
 a:where(:visited) {
   color: var(--link-visited, var(--link-color));
@@ -326,6 +355,8 @@ a:where(:visited) {
 a:where(:hover, :focus, :active) {
   color: var(--link-active);
   background-color: var(--link-active-bg);
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 0.15em;
 }
 
 img,
@@ -349,7 +380,7 @@ summary {
 .content-grid {
   --gutter: clamp(1rem, 6vw, 3rem);
   --full: minmax(var(--gutter), 1fr);
-  --content: min(50ch, 100% - var(--gutter) * 2);
+  --content: min(var(--measure), 100% - var(--gutter) * 2);
   --popout: minmax(0, 2rem);
   --feature: minmax(0, 5rem);
   display: grid;
@@ -378,6 +409,7 @@ body > footer {
   text-align: center;
   padding-block-start: 1rem;
   border-top: 1.5px solid;
+  font-size: var(--smaller, 0.8em);
 }
 
 .a-page {
