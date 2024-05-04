@@ -6,7 +6,7 @@ subtitle: a prose poem
 description: There are no shadows amid gray.
 attrs:
   html:
-    data-palette: cloned
+    data-palette: malachite
   main:
     class: content-grid
     data-type-family: serif
