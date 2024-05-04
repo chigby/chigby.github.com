@@ -1,6 +1,8 @@
 a {
   &:where(:any-link) {
     color: var(--link-color);
+    text-decoration-thickness: 0.03875em;
+    text-underline-offset: 0.2em;
   }
 
   &:where(:visited) {
@@ -10,5 +12,8 @@ a {
   &:where(:hover, :focus, :active) {
     color: var(--link-active);
     background-color: var(--link-active-bg);
+
+    text-decoration-thickness: 0.125em;
+    text-underline-offset: 0.15em;
   }
 }
