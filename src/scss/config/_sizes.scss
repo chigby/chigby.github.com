@@ -13,6 +13,8 @@
 @mixin text {
   // font sizes
   --larger: 1.2em;
+  --smaller: 0.8em;
+
   --line-height: 1.4;
   --measure: 60ch;
 }
