@@ -412,6 +412,23 @@ body > footer {
   font-size: var(--smaller, 0.8em);
 }
 
+body > header {
+  padding: var(--gap);
+  display: grid;
+  row-gap: var(--gap);
+  grid-template-columns: 1fr min(var(--measure), 100%) 1fr;
+}
+
+nav[aria-label=primary] {
+  grid-column: 2;
+}
+nav[aria-label=primary] a:any-link {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  color: var(--text);
+  text-decoration: none;
+}
+
 .a-page {
   display: grid;
   row-gap: var(--spacer);
@@ -422,7 +439,8 @@ body > footer {
 }
 
 #theme-chooser {
-  padding: var(--gap);
+  grid-column: 1/-1;
+  font-size: var(--smaller, 0.8em);
 }
 
 [data-gallery] {
