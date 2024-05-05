@@ -1,0 +1,17 @@
+body > header {
+  padding: var(--gap);
+  display: grid;
+  row-gap: var(--gap);
+  grid-template-columns: 1fr min(var(--measure), 100%) 1fr;
+}
+
+nav[aria-label="primary"] {
+  grid-column: 2;
+
+  a:any-link {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    color: var(--text);
+    text-decoration: none;
+  }
+}
