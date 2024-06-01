@@ -41,13 +41,13 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   eleventyConfig.addPassthroughCopy("src/twine");
 
   // assets
-  eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/fonts");
-  eleventyConfig.addPassthroughCopy("src/img");
-  eleventyConfig.addPassthroughCopy("src/vid");
-  eleventyConfig.addPassthroughCopy("src/**/*.txt");
-  eleventyConfig.addPassthroughCopy("src/favicon.ico");
-  eleventyConfig.addPassthroughCopy("src/CNAME");
+  eleventyConfig.addPassthroughCopy("content/css");
+  eleventyConfig.addPassthroughCopy("content/fonts");
+  eleventyConfig.addPassthroughCopy("content/img");
+  eleventyConfig.addPassthroughCopy("content/vid");
+  eleventyConfig.addPassthroughCopy("content/**/*.txt");
+  eleventyConfig.addPassthroughCopy("content/favicon.ico");
+  eleventyConfig.addPassthroughCopy("content/CNAME");
   return {
     markdownTemplateEngine: 'njk',
     templateFormats: [
