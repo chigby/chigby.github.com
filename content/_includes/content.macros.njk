@@ -44,6 +44,12 @@
     <iframe {{ util.as_attrs(attrs) }}></iframe>
 {% endmacro %}
 
+{% macro video(
+    src
+) -%}
+    {%- set src = src if ('://' in src) else ('/vid/' + src) -%}
+    <video src="{{ src }}" preload="metadata" controls>{{ src }}</video>
+{%- endmacro %}
 
 {% macro _render_data(
     data
@@ -57,6 +63,8 @@
                 item.height,
                 item.span
             ) -}}
+        {%- elif item.video -%}
+            {{- video(item.video) -}}
         {%- else -%}
         {%- endif -%}
     {%- endfor -%}
