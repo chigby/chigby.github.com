@@ -1,0 +1,16 @@
+{%- set stream = (collections[index] or []) if index else none -%}
+{%- if stream | length > 0 -%}
+    <section class="stream">
+        <h2>{{ index }}</h2>
+        {%- for item in stream -%}
+            <article>
+                <h3>{{ item.data.banner }}</h3>
+                <p>
+                    {% if item.data.type %}
+                        {{ item.data.type }}
+                    {% endif %}
+                </p>
+            </article>
+        {%- endfor -%}
+    </section>
+{%- endif -%}
