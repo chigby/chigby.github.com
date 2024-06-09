@@ -1,0 +1,11 @@
+{
+  layout: "rime",
+  attrs: {
+    body: {
+      class: "a-page"
+    },
+    main: {
+      class: "content-grid"
+    }
+  }
+}
