@@ -13,7 +13,7 @@ layout: secondary.njk
     <ul>
         {%- for post in collections.facebook -%}
             <li>
-                <a href="{{ post.url }}">{{ post.data.title }}</a>, {{ post.data.subtitle }}.
+                <a href="{{ post.url }}">{{ post.data.title }}</a>, {{ post.data.type }}.
             </li>
         {%- endfor -%}
     </ul>
@@ -23,7 +23,7 @@ layout: secondary.njk
         <li><a href="/northward/">Northward Meander</a>, a journey remembered in snowdrifts, parables, and dreams trapped behind mirrors.</li>
         {%- for post in collections.livejournal -%}
             <li>
-                <a href="{{ post.url }}">{{ post.data.title }}</a>, {{ post.data.subtitle }}.
+                <a href="{{ post.url }}">{{ post.data.title }}</a>, {{ post.data.type }}.
             </li>
         {%- endfor -%}
     </ul>

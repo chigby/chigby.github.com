@@ -2,7 +2,7 @@
 layout: rime
 tags: livejournal
 title: No-Place
-subtitle: a prose poem
+type: prose poem
 description: There are no shadows amid gray.
 attrs:
   html:

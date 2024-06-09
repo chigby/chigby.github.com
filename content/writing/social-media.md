@@ -2,7 +2,7 @@
 layout: rime
 tags: facebook
 title: Modern Social Media Etiquette
-subtitle: a prose poem
+type: prose poem
 description: That writhing mass of worms
 attrs:
   html:
