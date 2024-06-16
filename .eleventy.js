@@ -36,7 +36,7 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
 
   // separate projects included fully
   eleventyConfig.addPassthroughCopy("src/darken");
-  eleventyConfig.addPassthroughCopy("src/offsetCipher");
+  eleventyConfig.addPassthroughCopy("content/offset-cipher");
   eleventyConfig.addPassthroughCopy("src/pq");
   eleventyConfig.addPassthroughCopy("src/twine");
 
