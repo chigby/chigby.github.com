@@ -2,6 +2,10 @@
   font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
 }
 
+[data-type-family="monospace"] {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
 blockquote {
   border-inline-start: thick solid var(--border, currentColor);
   margin-inline: 0;
