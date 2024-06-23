@@ -75,7 +75,7 @@ inline_styles:
     <p><button id="submit">Submit quiz!</button></p>
 </div>
 <div id="answer" style="display:none;">
-    <h1 id="answer_title"></h1>
+    <h2 id="answer_title"></h1>
     <p id="answer_text"></p>
     <p><a href="index.html">Take quiz again</a></p>
 </div>
@@ -83,7 +83,7 @@ inline_styles:
 <script type="text/javascript">
  var answers = [
      {title: "Ouroboros",
-      text: "The quiz of neither beginning nor end, the quiz that eats its own tail, the quiz with no results.  You are the quiz that can never be escaped, where every question leads to another question, that leads to another question, and back unto the beginning once more.  And with each time through the cycle, time grows hazier.  Question run together &#8212; is this the seventh time or the seventieth?  Repetition turns to habit turns to necessity.  Questions become scales and eyes teeth forever gnawing in autocannibalism."},
+      text: "The quiz of neither beginning nor end, the quiz that eats its own tail, the quiz with no results.  You are the quiz that can never be escaped, where every question leads to another question, that leads to another question, and back unto the beginning once more.  And with each time through the cycle, time grows hazier.  Question run together—is this the seventh time or the seventieth?  Repetition turns to habit turns to necessity.  Questions become scales and eyes teeth forever gnawing in autocannibalism."},
      {title: "Hydra",
       text: "You are the quiz with a hundred heads, and each head a snake that sibilates an answer upon its forked tongue.  Every time someone clicks an option, two more sprout beneath it, and the quiz-taker is overwhelmed with indecision.  Only one has ever completed you, who is now a constellation in the shifting sky, who trapped your ever-writhing sea of heads and necks and fangs under a colossal slab and selected all your answers at once.  You have learned from this humiliation, ingesting caustic magical reagents until your breath steamed out in clouds of acid to dissolve any material implements by which mortals would attempt to confine you."},
      {title: "Ineffable",
@@ -104,9 +104,11 @@ inline_styles:
      };
 
      let answer = answers[sum % answers.length];
-     document.getElementById("answer_title").innerHTML = `Your result: ${answer['title']} Quiz`;
-     document.getElementById("answer_text").innerHTML = answer["text"];
-     document.getElementById("answer").setAttribute("style", "");
-     document.getElementById("quiz").setAttribute("style", "display: none");
+     document.getElementById("answer_title").innerText = `Your result: ${answer['title']} Quiz`;
+     document.getElementById("answer_text").innerText = answer["text"];
+     let answerElement = document.getElementById("answer");
+     answerElement.style.display = "block";
+     answerElement.scrollIntoView();
+     document.getElementById("quiz").style.display = "none";
  });
 </script>
