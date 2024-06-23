@@ -1,15 +1,26 @@
 {%- set stream = (collections[index] or []) if index else none -%}
 {%- if stream | length > 0 -%}
     <section class="stream">
-        <h2>{{ index }}</h2>
+        <h2>{{ index | capitalize }} Items</h2>
         {%- for item in stream -%}
-            <article>
-                <h3>{{ item.data.banner }}</h3>
-                <p>
-                    {% if item.data.type %}
-                        {{ item.data.type }}
-                    {% endif %}
-                </p>
+            <article class="stream-entry">
+                <header>
+                    <h3 class="stream-name">
+                        <a href="{{ item.url }}">
+                            {{- item.data.banner -}}
+                        </a>
+                    </h3>
+
+                    <p>
+                        {% if item.data.type %}
+                            <em>{{ item.data.type }}</em>
+                        {% endif %}
+                        &bull;
+                        {% if item.data.sub %}
+                            {{ item.data.sub }}
+                        {% endif %}
+                    </p>
+                </header>
             </article>
         {%- endfor -%}
     </section>
