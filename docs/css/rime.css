@@ -328,6 +328,10 @@ figure {
   font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
 }
 
+[data-type-family=monospace] {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+}
+
 blockquote {
   border-inline-start: thick solid var(--border, currentColor);
   margin-inline: 0;
@@ -342,6 +346,16 @@ blockquote > :last-child {
 blockquote > * {
   font-size: var(--larger);
   font-style: italic;
+}
+
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header h6,
+header p {
+  margin-block: 0;
 }
 
 a:where(:any-link) {
@@ -463,6 +477,10 @@ nav[aria-label=primary] a:any-link {
   [data-gallery=multi] > * {
     grid-column: var(--span);
   }
+}
+
+.stream-entry {
+  margin-block: var(--gap, 1em);
 }
 
 /*# sourceMappingURL=rime.css.map */
