@@ -4,6 +4,7 @@ function setTheme(value) {
     localStorage.setItem('theme', value);
   } else if (value === "system") {
     delete document.documentElement.dataset.colorTheme;
+    localStorage.removeItem("theme");
   }
 }
 
