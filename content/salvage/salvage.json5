@@ -1,0 +1,16 @@
+{
+  rel: "salvage",
+  type: "repost",
+  tags: [
+    "salvage",
+  ],
+  layout: "rime",
+  attrs: {
+    main: {
+      class: "content-grid",
+    },
+    body: {
+      class: "a-page",
+    }
+  }
+}
