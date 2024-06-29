@@ -3,4 +3,9 @@
     {% if sub %}
         <p>{{ sub | mdInline | safe }}</p>
     {% endif %}
+    {% if date %}
+        <p class="meta">
+            {% if rel == "salvage" %}Originally posted {% endif %}{{ date | date('PPP') }}
+        </p>
+    {% endif %}
 </header>
