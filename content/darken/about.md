@@ -1,6 +1,7 @@
 ---
 title: Darken
 sub: A Lights-Out Clone
+teaser: A Lights-Out Clone
 type: bauble
 layout: rime
 tags:
