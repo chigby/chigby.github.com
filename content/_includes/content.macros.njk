@@ -65,7 +65,8 @@
             ) -}}
         {%- elif item.video -%}
             {{- video(item.video) -}}
-        {%- else -%}
+        {%- elif item.img -%}
+            {%- img item.img, item.alt, item.sizes, item.attrs -%}
         {%- endif -%}
     {%- endfor -%}
 {%- endmacro %}
