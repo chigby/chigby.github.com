@@ -6,6 +6,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const configUtils = require('./src/plugins/utils');
 const typeUtils = require('./src/plugins/type');
 const timeUtils = require('./src/plugins/time');
+const imageUtils = require('./src/plugins/image');
 
 module.exports = function(eleventyConfig) {  // Set custom directories for input, output, includes, and data
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
@@ -30,6 +31,7 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   eleventyConfig.addPlugin(configUtils);
   eleventyConfig.addPlugin(typeUtils);
   eleventyConfig.addPlugin(timeUtils);
+  eleventyConfig.addPlugin(imageUtils);
 
   // configure json5 support for data files
   eleventyConfig.addDataExtension('json5', JSON5.parse);
@@ -43,6 +45,7 @@ module.exports = function(eleventyConfig) {  // Set custom directories for input
   // assets
   eleventyConfig.addPassthroughCopy("content/css");
   eleventyConfig.addPassthroughCopy("content/fonts");
+  // the ./content/img folder is "legacy" images
   eleventyConfig.addPassthroughCopy("content/img");
   eleventyConfig.addPassthroughCopy("content/vid");
   eleventyConfig.addPassthroughCopy("content/**/*.txt");
