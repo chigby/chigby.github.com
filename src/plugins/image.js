@@ -1,5 +1,7 @@
 'use strict';
 
+const path = require('path');
+
 const IMG_SRC = './content/images/';
 
 const Image = require('@11ty/eleventy-img');
@@ -31,12 +33,18 @@ const getImage = (
   let outputDir = './docs/images/';
 
   const fullSrc = `${IMG_SRC}${src}`;
+  if (fullSrc.startsWith(IMG_SRC)) {
+    const dir = path.dirname(src);
+    outputDir = `${outputDir}${dir}`;
+    urlPath = `${urlPath}${dir}`;
+  }
   const opts = {
     ...imageOptions,
     outputDir,
     urlPath,
   };
 
+  Image(fullSrc, opts);
   const metadata = Image.statsSync(fullSrc, opts);
 
   const imageAttributes = {
