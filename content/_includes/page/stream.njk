@@ -15,9 +15,11 @@
                         {% if item.data.type %}
                             <em>{{ item.data.type }}</em>
                         {% endif %}
-                        &bull;
+                        {% if item.data.venue %}
+                            from <em>{{ item.data.venue }}</em>
+                        {% endif %}
                         {% if item.data.teaser %}
-                            {{ item.data.teaser }}
+                            &bull; {{ item.data.teaser }}
                         {% endif %}
                     </p>
                 </header>

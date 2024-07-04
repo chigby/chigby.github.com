@@ -1,0 +1,7 @@
+{% if (rel and url and venue) %}
+    <footer id="page-footer">
+        <p>
+            {{ rel | capitalize }} from <a href="{{ url }}">{{ venue }}</a>
+        </p>
+    </footer>
+{% endif %}

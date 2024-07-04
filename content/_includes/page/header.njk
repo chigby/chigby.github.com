@@ -1,6 +1,11 @@
 <header id="page-header">
     <h1>{{ banner }}</h1>
     {% if sub %}
-        <p>{{ sub | mdInline | safe }}</p>
+        <p class="subtitle">{{ sub | mdInline | safe }}</p>
+    {% endif %}
+    {% if date %}
+        <p class="meta">
+            {% if rel == "salvage" %}Originally posted {% endif %}{{ date | date('PPP') }}
+        </p>
     {% endif %}
 </header>
