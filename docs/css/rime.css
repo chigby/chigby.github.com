@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* @docs
 label: Core Remedies
 version: 0.1.0-beta.2
@@ -426,6 +427,17 @@ body > footer {
   font-size: var(--smaller, 0.8em);
 }
 
+#page-footer {
+  padding-top: var(--spacer);
+}
+
+#page-header .subtitle {
+  font-style: italic;
+}
+#page-header .meta {
+  font-size: var(--smaller, 0.8em);
+}
+
 body > header {
   padding: var(--gap);
   display: grid;
@@ -481,6 +493,31 @@ nav[aria-label=primary] a:any-link {
 
 .stream-entry {
   margin-block: var(--gap, 1em);
+}
+
+.oberon {
+  --max-width: 70ch;
+  width: min(100%, var(--max-width));
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  padding: 0 clamp(1rem, 5vw, 3rem);
+}
+.oberon h3 {
+  float: left;
+  font-size: inherit;
+  margin-right: 0.5em;
+  line-height: inherit;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0;
+}
+.oberon h3::after {
+  content: "❧";
+  font: 1.3em/0.5em sans-serif;
+  padding-left: 0.5rem;
+  position: relative;
+  top: 3px;
 }
 
 /*# sourceMappingURL=rime.css.map */
