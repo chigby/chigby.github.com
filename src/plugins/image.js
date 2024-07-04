@@ -29,7 +29,7 @@ const getImage = (
   sizes = 'default',
   attrs = {},
 ) => {
-  let urlPath = '/images';
+  let urlPath = '/images/';
   let outputDir = './docs/images/';
 
   const fullSrc = `${IMG_SRC}${src}`;
