@@ -1,0 +1,16 @@
+[data-gallery="petrichor"] {
+  align-content: center;
+  justify-content: center;
+}
+
+.petrichor-image {
+  --gap: 0;
+  --shadow: var(--background-color);
+  align-content: center;
+  justify-content: center;
+
+  figcaption {
+    padding: 0 1rem;
+    max-width: 70ch;
+  }
+}
