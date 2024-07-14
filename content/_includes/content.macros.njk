@@ -3,11 +3,12 @@
 {% macro figure(
     data=none,
     caption=none,
+    gallery="",
     attrs={}
 ) -%}
     {%- set rendered = _render_data(data) -%}
     {%- set multi = data and data | length > 1 -%}
-    {%- set gallery = 'multi' if multi else "" -%}
+    {%- set gallery = 'multi' if multi else gallery -%}
     <figure {{ util.as_attrs(attrs) }}>
         <div {{ util.attr_if('data-gallery', gallery) }}>
             {{- rendered | trim | safe -}}
