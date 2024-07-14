@@ -10,8 +10,6 @@ media:
 attrs:
   html:
     data-palette: malachite
-  main:
-    class: content-grid
 ---
 {% import "content.macros.njk" as content %}
 

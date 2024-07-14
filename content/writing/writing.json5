@@ -1,5 +1,8 @@
 {
   attrs: {
+    main: {
+      class: "content-grid",
+    },
     body: {
       class: "a-page",
     }
