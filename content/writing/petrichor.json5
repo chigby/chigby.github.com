@@ -1,0 +1,24 @@
+{
+  gallery: [
+    {
+      img: "/projects/petrichor/Petrichor1.png",
+      alt: "A gabled mansion looms at the top of a hill with a winding path leading to a lit doorway.",
+      caption: "In a house on a hill, mouldering and grim, there lived a mouse and her child.",
+    },
+    {
+      img: "/projects/petrichor/Petrichor2.png",
+      alt: "A white mouse with a red nose regards its own shadow from a beam in the rafters.  From the nearby gloom, another mouse watches the first, tentative.",
+      caption: "By day, the pair played in the dusty sunlight, running across spiderwebs and dripping pipes.",
+    },
+    {
+      img: "/projects/petrichor/Petrichor3.png",
+      alt: "A large mouse and a smaller mouse with a red nose curl against each other in a den, which sits surrounded by floral wallpaper.",
+      caption: "By night, they nestled in their hole and listened to the yowling of the wind and the deep groans of rocks beneath the earth."
+    },
+    {
+      img: "/projects/petrichor/Petrichor4.png",
+      alt: "The mouse with the red nose, in a hallway of floral wallpaper, looks into a black, circular hole that opens across the wall and floor moulding.",
+      caption: "One afternoon, when the mist streaked its fingers over the windows, the mouse's child made a quizzical face and darted into a perfect, round hole in the wall she had never seen before.",
+    }
+  ],
+}
