@@ -2,7 +2,7 @@ figure {
   display: grid;
   gap: 1em;
   margin-inline: 0;
-  padding: 1em;
+  padding: var(--gap, 1em);
 
   background-color: var(--shadow);
 }
