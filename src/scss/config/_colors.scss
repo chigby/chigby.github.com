@@ -65,6 +65,14 @@ $colors: (
 @mixin theme {
   @include dark;
 
+  // applications of color
+  --action: var(--accent-color);
+  --active: var(--complement);
+
+  // not 100% sure if these are correct to put here
+  --link-color: var(--action);
+  --link-active: var(--active);
+
   @media (prefers-color-scheme: light) {
     @include light;
   }
@@ -76,12 +84,4 @@ $colors: (
   &[data-color-theme="light"] {
     @include light;
   }
-
-  // applications of color
-  --action: var(--accent-color);
-  --active: var(--complement);
-
-  // not 100% sure if these are correct to put here
-  --link-color: var(--action);
-  --link-active: var(--active);
 }

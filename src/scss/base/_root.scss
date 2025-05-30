@@ -4,10 +4,9 @@
 @use '../config/fonts';
 
 html {
-  @include colors.theme;
   @include sizes.space;
-  @include sizes.text;
   @include fonts.ui;
+  @include sizes.text;
 
   font-family: var(--font-body, var(--ui-sans));
   font-weight: normal;
@@ -16,4 +15,7 @@ html {
 
   background-color: var(--background-color);
   color: var(--text-color);
+
+  // Contains nested rules, so ought to follow all declarations.
+  @include colors.theme;
 }
